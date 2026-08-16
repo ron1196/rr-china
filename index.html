@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>טיול לסין – סקירה כללית</title>
+<style>
+  body { font-family: 'Segoe UI', Arial, 'Noto Sans Hebrew', sans-serif; direction: rtl; text-align: right; max-width: 900px; margin: 40px auto; padding: 0 20px; color: #1a1a1a; line-height: 1.6; }
+  h1 { font-size: 26px; border-bottom: 3px solid #2b6cb0; padding-bottom: 10px; }
+  h2 { color: #2b6cb0; font-size: 19px; margin-top: 32px; border-bottom: 1px solid #cbd5e0; padding-bottom: 6px; }
+  h3 { font-size: 18px; color: #1a365d; margin-top: 28px; }
+  .intro { font-style: italic; color: #444; }
+  table { width: 100%; border-collapse: collapse; margin: 16px 0; direction: rtl; }
+  th, td { border: 1px solid #cbd5e0; padding: 8px 10px; text-align: right; font-size: 14px; vertical-align: top; }
+  th { background: #e2e8f0; font-weight: bold; }
+  ul { margin: 6px 0 18px 0; padding-right: 22px; }
+  li { margin-bottom: 4px; }
+  .label { font-weight: bold; margin-top: 14px; display: block; }
+  .note li { margin-bottom: 8px; }
+  .food-note { font-size: 13px; color: #555; margin: 4px 0 12px 0; }
+  table.food-table th, table.food-table td { font-size: 13px; }
+  .badge { display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: 12px; font-weight: bold; margin-left: 4px; }
+  .badge-must { background: #fde2e2; color: #9b2c2c; }
+  .badge-nice { background: #e6f4ea; color: #276749; }
+  .badge-book { background: #ede9fe; color: #5b21b6; }
+  .badge-spa { background: #e0e7ff; color: #363594; }
+  .badge-tech { background: #fef3c7; color: #92400e; }
+  .badge-night { background: #1e293b; color: #e2e8f0; }
+  .badge-day { background: #fef9c3; color: #854d0e; }
+  .zh { font-family: 'Noto Sans CJK SC', 'PingFang SC', 'Heiti SC', sans-serif; direction: ltr; }
+  .en { direction: ltr; display: inline-block; }
+  .main-box { background: #ebf4ff; border-right: 4px solid #2b6cb0; padding: 10px 14px; margin: 10px 0 16px 0; }
+  .main-box .main-label { font-size: 12px; color: #2b6cb0; font-weight: bold; margin-bottom: 4px; }
+  .main-box div.item { font-weight: bold; margin-bottom: 2px; }
+  .after-item { margin-bottom: 10px; }
+  .after-item .title { font-weight: bold; }
+  .after-item .desc { font-size: 13px; color: #555; margin-top: 2px; }
+  .day-heading { font-weight: bold; color: #1a365d; font-size: 15px; margin: 16px 0 6px 0; border-bottom: 1px dashed #cbd5e0; padding-bottom: 3px; }
+  table.food-table { table-layout: fixed; }
+  table.food-table th:nth-child(1), table.food-table td:nth-child(1) { width: 13%; }
+  table.food-table th:nth-child(2), table.food-table td:nth-child(2) { width: 15%; }
+  table.food-table th:nth-child(3), table.food-table td:nth-child(3) { width: 9%; }
+  table.food-table th:nth-child(4), table.food-table td:nth-child(4) { width: 7%; }
+  table.food-table th:nth-child(5), table.food-table td:nth-child(5) { width: 30%; }
+  table.food-table th:nth-child(6), table.food-table td:nth-child(6) { width: 26%; }
+  .venue { color: #1a5490; font-size: 12.5px; }
+  table.chains-table { table-layout: fixed; }
+  table.chains-table th:nth-child(1), table.chains-table td:nth-child(1) { width: 14%; }
+  table.chains-table th:nth-child(2), table.chains-table td:nth-child(2) { width: 16%; }
+  table.chains-table th:nth-child(3), table.chains-table td:nth-child(3) { width: 12%; }
+  table.chains-table th:nth-child(4), table.chains-table td:nth-child(4) { width: 8%; }
+  table.chains-table th:nth-child(5), table.chains-table td:nth-child(5) { width: 50%; }
+  .chains-table td, .chains-table th { font-size: 13px; }
+  .bonus-item { margin-bottom: 8px; }
+  .bonus-item .title { font-weight: bold; }
+  .bonus-item .desc { font-size: 13px; color: #555; margin-top: 2px; }
+  .summary-box { background: #f0fdf4; border-right: 4px solid #276749; padding: 12px 16px; margin: 12px 0 20px 0; }
+  .summary-box ul { margin: 6px 0 0 0; }
+  .summary-box li { margin-bottom: 5px; }
+  .callout { background: #fef3c7; border-right: 4px solid #b45309; padding: 12px 14px; margin: 14px 0 18px 0; font-size: 14px; color: #78350f; }
+  .nav { margin: 18px 0; padding: 10px 14px; background: #f7fafc; border: 1px solid #e2e8f0; border-radius: 6px; font-size: 14px; }
+  .nav a { color: #2b6cb0; text-decoration: none; margin: 0 6px; }
+  .nav a:hover { text-decoration: underline; }
+  .toc { columns: 2; column-gap: 24px; }
+  .toc li { margin-bottom: 6px; }
+</style>
+</head>
+<body>
+
+<h1>טיול לסין – סקירה כללית ולוגיסטיקה</h1>
+<p>מסמך זה מסכם את מסלול הטיול המתוכנן לסין: טבלת לוגיסטיקה, נתוני טיול כלליים, ורשתות אוכל ארציות. לתוכנית המפורטת (מה לעשות, מה לאכול, מה חובה להזמין מראש) של כל עיר – ראו את הקובץ הנפרד שלה בתפריט למטה.</p>
+
+<div class="summary-box">
+<span class="label">נתוני הטיול הכלליים:</span>
+<ul>
+<li>הגעה: 23/8/2026, 17:20 – בייג'ינג (PEK), טיסת אתיופיאן דרך אדיס אבבה</li>
+<li>עזיבה: 2/10/2026, 00:20 – משנגחאי פודונג (PVG), טיסת אתיופיאן דרך אדיס אבבה</li>
+<li>סה"כ 40 לילות בסין (מ-23/8 ועד 1/10 כלולים)</li>
+<li>11 תחנות במסלול</li>
+<li>לילות מוקצים: 40 מתוך 40 (הכל מוקצה, בשתי האופציות)</li>
+</ul>
+</div>
+
+<div class="callout">
+<b>יאנגשואו/גוילין ושנגחאי – שתי הערים הגמישות:</b> יאנגשואו/גוילין ושנגחאי הן שתי הערים הגמישות במסלול – לאחר הוספת ג'יוג'איגואו והונג קונג, נשארו בדיוק 10 לילות משותפים לחלוקה בין שתיהן. אופציה א׳ (חופשת טבע): 6 לילות ביאנגשואו / 4 בשנגחאי – מתאימה למי שרוצה להוריד הילוך אמצע הטיול, טיולי אופניים ארוכים ופינות שקטות על הנהר. אופציה ב׳ (בסיס עירוני): 3 לילות ביאנגשואו / 7 בשנגחאי – מתאימה למי שרוצה בסיס נוח וממושך בסוף הטיול, בלי החלפות מלון תכופות, עם הרבה זמן לקניות/תרבות פופ/בתי קפה. שתי האופציות מסתכמות ב-40 לילות בדיוק, בדיוק כמו הטיול המקורי.
+</div>
+
+<p><a href="00b-calendar.html"><b>← לוח שנה יומי מלא (יום-יום, כולל תאריכים)</b></a></p>
+
+<h2>תוכנית מפורטת לפי עיר</h2>
+<ol class="toc">
+<li><a href="01-beijing.html">בייג'ינג (6 לילות)</a></li>
+<li><a href="02-xian.html">שיאן (2 לילות)</a></li>
+<li><a href="03-chengdu.html">צ'נגדו (3 לילות)</a></li>
+<li><a href="04-jiuzhaigou.html">ג'יוג'איגואו (3 לילות)</a></li>
+<li><a href="05-chongqing.html">צ'ונגצ'ינג (3 לילות)</a></li>
+<li><a href="06-zhangjiajie.html">ג'אנגג'יאג'יה (4 לילות)</a></li>
+<li><a href="07-yangshuo.html">יאנגשואו (אופציה א׳: 6 / אופציה ב׳: 3 לילות)</a></li>
+<li><a href="08-shenzhen.html">שנזן (3 לילות)</a></li>
+<li><a href="09-hongkong.html">הונג קונג (4 לילות)</a></li>
+<li><a href="10-hangzhou.html">האנגג'ואו (2 לילות)</a></li>
+<li><a href="11-shanghai.html">שנגחאי (אופציה א׳: 4 / אופציה ב׳: 7 לילות)</a></li>
+</ol>
+
+<h2>טבלת מסלול ולוגיסטיקה</h2>
+<table>
+<tr><th>יעד</th><th>לילות</th><th>הגעה מ-</th><th>אמצעי תחבורה מומלץ</th><th>משך נסיעה</th></tr>
+<tr><td>בייג'ינג</td><td>6</td><td>טיסה מהארץ</td><td>-</td><td>-</td></tr>
+<tr><td>שיאן</td><td>2</td><td>בייג'ינג</td><td>רכבת מהירה ישירה</td><td>כ-4 שעות</td></tr>
+<tr><td>צ'נגדו</td><td>3</td><td>שיאן</td><td>רכבת מהירה ישירה</td><td>כ-3-4.5 שעות</td></tr>
+<tr><td>ג'יוג'איגואו</td><td>3</td><td>צ'נגדו</td><td>רכבת מהירה צ'נגדו מזרח ← חואנגלונג-ג'יוג'איג'אי (99 דק') + הסעה לעמק (כ-40 דק')</td><td>כ-1:40-2 שעות</td></tr>
+<tr><td>צ'ונגצ'ינג</td><td>3</td><td>ג'יוג'איגואו</td><td>הסעה לשדה התעופה (כ-1.5 שעות) + טיסה ישירה JZH←CKG (כ-1:20)</td><td>כ-3 שעות בשילוב מעברים</td></tr>
+<tr><td>ג'אנגג'יאג'יה</td><td>4</td><td>צ'ונגצ'ינג</td><td>רכבת מהירה ישירה</td><td>כ-2.5 שעות</td></tr>
+<tr><td>יאנגשואו / גוילין</td><td>אופציה א׳: 6 / אופציה ב׳: 3</td><td>ג'אנגג'יאג'יה</td><td>טיסה (ישירה או דרך צ'אנגשה) + רכבת/הסעה לגוילין ואז ליאנגשואו</td><td>יום נסיעה שלם</td></tr>
+<tr><td>שנזן</td><td>3</td><td>גוילין</td><td>רכבת מהירה ישירה גוילין ← שנזן</td><td>כ-3-3.5 שעות</td></tr>
+<tr><td>הונג קונג</td><td>4</td><td>שנזן</td><td>רכבת מהירה ישירה שנזן פוטיאן ← הונג קונג מערב קאולון (מעבר גבול בתחנה)</td><td>כ-14-33 דקות</td></tr>
+<tr><td>האנגג'ואו</td><td>2</td><td>הונג קונג</td><td>רכבת מהירה ישירה G100, הונג קונג מערב קאולון ← האנגג'ואו西 (יוצאת 11:37, מגיעה 18:27)</td><td>כ-6:50 שעות</td></tr>
+<tr><td>שנגחאי</td><td>אופציה א׳: 4 / אופציה ב׳: 7</td><td>האנגג'ואו</td><td>רכבת מהירה ישירה (כולל גיחת יום לסוג'ואו)</td><td>כ-1-1.5 שעות</td></tr>
+</table>
+
+<span class="label">הערת לוגיסטיקה כללית:</span>
+<ul class="note">
+<li>שינוי מהותי מהגרסה הקודמת: חואנגשאן וסוג'ואו (כלינה) הוחלפו – חואנגשאן יצא מהמסלול, וג'יוג'איגואו (ג'יוג'איגואו, Jiuzhaigou) נכנס במקומו אחרי צ'נגדו. סוג'ואו נשארת, אבל כגיחת יום משנגחאי/האנגג'ואו, לא כלינה נפרדת.</li>
+<li>צ'נגדו ← ג'יוג'איגואו: רכבת מהירה ישירה צ'נגדו מזרח ← תחנת חואנגלונג-ג'יוג'איג'אי, כ-99 דקות בלבד (20+ רכבות ביום) + הסעה מהתחנה לעמק עצמו כ-40 דקות. הרבה יותר טוב מהאוטובוס הישן (7-10 שעות).</li>
+<li>ג'יוג'איגואו ← צ'ונגצ'ינג: אין רכבת ישירה (צריך לחזור לצ'נגדו כדי להמשיך ברכבת). הפתרון הטוב ביותר הוא טיסה ישירה משדה התעופה חואנגלונג-ג'יוג'איג'אי (JZH) לצ'ונגצ'ינג (CKG), כ-1:20 שעות, 3-5 טיסות ביום בעונה (לא בחורף). כולל הסעה מהעמק לשדה התעופה (כ-1.5 שעות, 88 ק״מ) – סה״כ יום מעבר, לא חצי יום.</li>
+<li>הקטע החלש ביותר במסלול נשאר צ'ונגצ'ינג ← ג'אנגג'יאג'יה ← יאנגשואו/גוילין: אין רכבת ישירה בין ג'אנגג'יאג'יה לגוילין/יאנגשואו – מומלץ טיסה ולא רצף רכבות/הסעות. מומלץ לתכנן במפורש יום מעבר ולבדוק זמינות טיסות ישירות עונתיות מראש.</li>
+<li>שנזן והונג קונג: רכבת מהירה ישירה שנזן פוטיאן ← הונג קונג מערב קאולון, כ-14-33 דקות בלבד. הונג קונג פטורה מאשרת כניסה לאזרחי ישראל (עד 90 יום). חשוב: יציאה מסין היבשתית להונג קונג נחשבת יציאה מהמדינה, והכניסה בחזרה דורשת אשרת סין multiple/double-entry (לא single-entry).</li>
+<li>הונג קונג ← האנגג'ואו: תגלית חשובה – יש רכבת מהירה ישירה אחת ביום (G100) שיוצאת ממערב קאולון ב-11:37 ומגיעה ישירות לתחנת האנגג'ואו西 ב-18:27 (כ-6:50 שעות), בלי לעבור דרך שנזן או לטוס. זו אותה רכבת שהמשכה מגיע לשנגחאי הונגצ'יאו – כך שאם משנים תוכניות אפשר גם לרדת ישר בשנגחאי. יש רק רכבת אחת ביום בכיוון הזה, אז הבוקר האחרון בהונג קונג צריך להיבנות סביב יציאה ב-11:37.</li>
+<li>מקאו כגיחת יום מהונג קונג: מעבורת מהירה (~55-70 דקות) בתדירות גבוהה לאורך היום. מקאו הוא SAR נפרד בדיוק כמו הונג קונג ופטור מאשרה לישראלים (עד 90 יום) – כלומר המעבר הונג קונג↔מקאו↔הונג קונג לא נוגע ביבשת סין בכלל ולא צורך כניסה/יציאה נוספת על אשרת הסין (בניגוד למעבר שנזן↔הונג קונג). חשוב לחזור להונג קונג באותו יום/לפני הבוקר של ה-11:37 כדי לא לפספס את רכבת ה-G100.</li>
+<li>סוג'ואו כגיחת יום: קרובה מאוד גם להאנגג'ואו וגם לשנגחאי (כ-40-60 דקות רכבת מהירה מכל אחת מהן) – אפשר לשלב אותה כיום שלם באמצע השהות בהאנגג'ואו או בשנגחאי, בלי לעבור מלון.</li>
+<li>האנגג'ואו ← שנגחאי: רכבת מהירה ישירה ותכופה, כ-1-1.5 שעות.</li>
+<li>לגבי אורך יאנגשואו/גוילין ושנגחאי: שתי הערים האלה הן ה'ידיים הגמישות' של המסלול – ראו הערה נפרדת על אופציה א׳/ב׳.</li>
+</ul>
+
+<h2>רשתות שחובה לנסות (בכל הטיול)</h2>
+<p>כמו CoCo, Ichiran או Hama Sushi ביפן – אלה לא רק אוכל, אלא חלק מהחוויה של הטיול.</p>
+<table class="food-table chains-table">
+<tr><th>עברית</th><th>English</th><th>中文</th><th>דירוג</th><th>מה מיוחד בה</th></tr>
+<tr>
+  <td>האיידילאו</td>
+  <td><span class="en">Haidilao</span></td>
+  <td><span class="zh">海底捞</span></td>
+  <td><span class="badge badge-must">MUST</span></td>
+  <td>רשת ההוט פוט הכי מפורסמת בסין, לא בגלל האוכל בלבד אלא בגלל השירות המשוגע: טיפולי ידיים/מגפיים חינם בזמן ההמתנה, וריקוד/מופע מתיחת נודלס תיאטרלי לצד השולחן. פתוחה 24 שעות, זמין בכל עיר גדולה בטיול.</td>
+</tr>
+<tr>
+  <td>מיקסו</td>
+  <td><span class="en">Mixue</span></td>
+  <td><span class="zh">蜜雪冰城</span></td>
+  <td><span class="badge badge-must">MUST</span></td>
+  <td>רשת גלידה/תה בועות אדירה וזולה בטירוף (סביב $1), על כל פינה בכל עיר. הקמע האדום-לבן ('מלך השלג') הוא מם ברשתות החברתיות הסיניות.</td>
+</tr>
+<tr>
+  <td>יאנג גואופו מאלטאנג</td>
+  <td><span class="en">Yang Guofu Malatang</span></td>
+  <td><span class="zh">杨国福麻辣烫</span></td>
+  <td><span class="badge badge-nice">NICE</span></td>
+  <td>רשת מרק חריף-מאלס בסטייל 'תבחרו לבד' – בוחרים שיפודים/ירקות/נודלס מקיר שלם של אפשרויות, שוקלים, ומקבלים מרק לפי הבחירה.</td>
+</tr>
+<tr>
+  <td>צ'אג'י (באוואנג צ'אג'י)</td>
+  <td><span class="en">Chagee</span></td>
+  <td><span class="zh">霸王茶姬</span></td>
+  <td><span class="badge badge-nice">NICE</span></td>
+  <td>רשת תה החלב הכי חמה כרגע בסין, אסתטיקה של 'בית תה יונאני'.</td>
+</tr>
+<tr>
+  <td>לאקין קופי</td>
+  <td><span class="en">Luckin Coffee</span></td>
+  <td><span class="zh">瑞幸咖啡</span></td>
+  <td><span class="badge badge-must">MUST</span></td>
+  <td>עברה את סטארבקס בסין לפני כמה שנים ונשארה שם – מעל 33,000 סניפים ברחבי סין, יותר מכל רשת קפה אחרת בעולם. הזמנה רק דרך אפליקציה/מיני-פרוגרם (לרוב אין קופה בדלפק), אבל מחירים אגרסיביים עם קופונים (סביב 9.9-15 יואן). המנה המזוהה: לאטה קוקוס גולמי (生椰拿铁). שימו עין גם על קוטי קופי (库迪咖啡) – מתחרה שהוקמה ע"י המייסדים הקודמים של לאקין, ומנהלת איתה מלחמת מחירים על אותו כוס 9.9 יואן; טעם דומה, לא צריך לנסות את שניהם.</td>
+</tr>
+<tr>
+  <td>טאסטין ("ההמבורגר הסיני")</td>
+  <td><span class="en">Tastien</span></td>
+  <td><span class="zh">塔斯汀</span></td>
+  <td><span class="badge badge-must">MUST</span></td>
+  <td>לא עוד רשת המבורגרים – הלחמנייה עצמה נאפית/מגולגלת ביד בסטייל מאפה סיני מסורתי (כמו רוג'יאמו), עם מילויים כמו ברווז פקין או חזיר ברוטב פו-יו. קונספט פיוז'ן אמיתי וייחודי, לא חיקוי מערבי; מ-2012 קפצה ל-8,000+ סניפים ברוב ערי סין.</td>
+</tr>
+<tr>
+  <td>היי טי</td>
+  <td><span class="en">HeyTea</span></td>
+  <td><span class="zh">喜茶</span></td>
+  <td><span class="badge badge-must">MUST</span></td>
+  <td>הרשת שהמציאה את 'תה הגבינה' (奶盖茶) – קרם גבינה מלוח קלות על תה אמיתי עם פירות טריים, לא רק סירופ. זו החדשנות שהפכה את כל תעשיית התה הסיני החדש (כולל Chagee) לתופעה עולמית; שווה לנסות את המקור.</td>
+</tr>
+<tr>
+  <td>וואלאס</td>
+  <td><span class="en">Wallace</span></td>
+  <td><span class="zh">华莱士</span></td>
+  <td><span class="badge badge-nice">NICE</span></td>
+  <td>לא חוויית טעם מיוחדת, אבל תופעה בפני עצמה: רשת המזון המהיר הגדולה בסין לפי מספר סניפים – כ-20,000, יותר מ-KFC ומקדונלד'ס ביחד בסין – עם המבורגרי עוף בכ-10 יואן. שווה בעיקר בשביל הסקרנות/מחיר, לא בשביל הטעם.</td>
+</tr>
+</table>
+
+</body>
+</html>

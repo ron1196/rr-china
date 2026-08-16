@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>ג'אנגג'יאג'יה – תוכנית מפורטת</title>
+<style>
+  body { font-family: 'Segoe UI', Arial, 'Noto Sans Hebrew', sans-serif; direction: rtl; text-align: right; max-width: 900px; margin: 40px auto; padding: 0 20px; color: #1a1a1a; line-height: 1.6; }
+  h1 { font-size: 26px; border-bottom: 3px solid #2b6cb0; padding-bottom: 10px; }
+  h2 { color: #2b6cb0; font-size: 19px; margin-top: 32px; border-bottom: 1px solid #cbd5e0; padding-bottom: 6px; }
+  h3 { font-size: 18px; color: #1a365d; margin-top: 28px; }
+  .intro { font-style: italic; color: #444; }
+  table { width: 100%; border-collapse: collapse; margin: 16px 0; direction: rtl; }
+  th, td { border: 1px solid #cbd5e0; padding: 8px 10px; text-align: right; font-size: 14px; vertical-align: top; }
+  th { background: #e2e8f0; font-weight: bold; }
+  ul { margin: 6px 0 18px 0; padding-right: 22px; }
+  li { margin-bottom: 4px; }
+  .label { font-weight: bold; margin-top: 14px; display: block; }
+  .note li { margin-bottom: 8px; }
+  .food-note { font-size: 13px; color: #555; margin: 4px 0 12px 0; }
+  table.food-table th, table.food-table td { font-size: 13px; }
+  .badge { display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: 12px; font-weight: bold; margin-left: 4px; }
+  .badge-must { background: #fde2e2; color: #9b2c2c; }
+  .badge-nice { background: #e6f4ea; color: #276749; }
+  .badge-book { background: #ede9fe; color: #5b21b6; }
+  .badge-spa { background: #e0e7ff; color: #363594; }
+  .badge-tech { background: #fef3c7; color: #92400e; }
+  .badge-night { background: #1e293b; color: #e2e8f0; }
+  .badge-day { background: #fef9c3; color: #854d0e; }
+  .zh { font-family: 'Noto Sans CJK SC', 'PingFang SC', 'Heiti SC', sans-serif; direction: ltr; }
+  .en { direction: ltr; display: inline-block; }
+  .main-box { background: #ebf4ff; border-right: 4px solid #2b6cb0; padding: 10px 14px; margin: 10px 0 16px 0; }
+  .main-box .main-label { font-size: 12px; color: #2b6cb0; font-weight: bold; margin-bottom: 4px; }
+  .main-box div.item { font-weight: bold; margin-bottom: 2px; }
+  .after-item { margin-bottom: 10px; }
+  .after-item .title { font-weight: bold; }
+  .after-item .desc { font-size: 13px; color: #555; margin-top: 2px; }
+  .day-heading { font-weight: bold; color: #1a365d; font-size: 15px; margin: 16px 0 6px 0; border-bottom: 1px dashed #cbd5e0; padding-bottom: 3px; }
+  table.food-table { table-layout: fixed; }
+  table.food-table th:nth-child(1), table.food-table td:nth-child(1) { width: 13%; }
+  table.food-table th:nth-child(2), table.food-table td:nth-child(2) { width: 15%; }
+  table.food-table th:nth-child(3), table.food-table td:nth-child(3) { width: 9%; }
+  table.food-table th:nth-child(4), table.food-table td:nth-child(4) { width: 7%; }
+  table.food-table th:nth-child(5), table.food-table td:nth-child(5) { width: 30%; }
+  table.food-table th:nth-child(6), table.food-table td:nth-child(6) { width: 26%; }
+  .venue { color: #1a5490; font-size: 12.5px; }
+  table.chains-table { table-layout: fixed; }
+  table.chains-table th:nth-child(1), table.chains-table td:nth-child(1) { width: 14%; }
+  table.chains-table th:nth-child(2), table.chains-table td:nth-child(2) { width: 16%; }
+  table.chains-table th:nth-child(3), table.chains-table td:nth-child(3) { width: 12%; }
+  table.chains-table th:nth-child(4), table.chains-table td:nth-child(4) { width: 8%; }
+  table.chains-table th:nth-child(5), table.chains-table td:nth-child(5) { width: 50%; }
+  .chains-table td, .chains-table th { font-size: 13px; }
+  .bonus-item { margin-bottom: 8px; }
+  .bonus-item .title { font-weight: bold; }
+  .bonus-item .desc { font-size: 13px; color: #555; margin-top: 2px; }
+  .summary-box { background: #f0fdf4; border-right: 4px solid #276749; padding: 12px 16px; margin: 12px 0 20px 0; }
+  .summary-box ul { margin: 6px 0 0 0; }
+  .summary-box li { margin-bottom: 5px; }
+  .callout { background: #fef3c7; border-right: 4px solid #b45309; padding: 12px 14px; margin: 14px 0 18px 0; font-size: 14px; color: #78350f; }
+  .nav { margin: 18px 0; padding: 10px 14px; background: #f7fafc; border: 1px solid #e2e8f0; border-radius: 6px; font-size: 14px; }
+  .nav a { color: #2b6cb0; text-decoration: none; margin: 0 6px; }
+  .nav a:hover { text-decoration: underline; }
+  .toc { columns: 2; column-gap: 24px; }
+  .toc li { margin-bottom: 6px; }
+</style>
+</head>
+<body>
+
+<h1>ג'אנגג'יאג'יה (4 לילות)</h1>
+<div class="nav">
+  <a href="00-overview.html">↩ סקירה כללית</a>
+  | <a href="00b-calendar.html">לוח שנה יומי</a>
+  | <a href="05-chongqing.html">← צ'ונגצ'ינג</a>
+  | <a href="07-yangshuo.html">יאנגשואו →</a>
+</div>
+<p class="intro">טבע עוצר נשימה בהרי אבטאר, אחד המוקדים הדרמטיים ביותר בטיול.</p>
+
+<span class="label">העיקר:</span>
+<div class="main-box">
+<div class="item">הר טיאנמן (Tianmen Mountain) – ממש בתוך העיר, סמוך לתחנת הרכבת</div>
+</div>
+
+<span class="label">ומה עושים אחר כך:</span>
+<div class="day-heading">יום 1</div><div class="after-item">
+  <span class="badge badge-must">MUST</span><span class="badge badge-book">הזמנה: מראש</span>
+  <span class="title">הרכבל הארוך בעולם לטיאנמן</span>
+  <div class="desc">עולה להר ממש ממרכז העיר. חובה להזמין מראש – כרטיסים לפי חלונות זמן קשיחים, נחטפים באוגוסט-ספטמבר</div>
+</div>
+<div class="after-item">
+  <span class="badge badge-must">MUST</span>
+  <span class="title">שבילי הזכוכית (Glass Skywalks) על צלע המצוק</span>
+  <div class="desc">משלמים סכום סמלי (כ-5 יואן) במקום לכיסויי נעליים</div>
+</div>
+<div class="after-item">
+  <span class="badge badge-nice">NICE</span>
+  <span class="title">מערת שער השמיים (Heaven's Gate Cave) ו-999 המדרגות</span>
+  <div class="desc">כלול בכרטיס הכניסה הראשי של ההר</div>
+</div>
+<div class="day-heading">יום 2</div><div class="after-item">
+  <span class="badge badge-must">MUST</span>
+  <span class="title">מעלית באילונג (Bailong Elevator)</span>
+  <div class="desc">המעלית הזכוכית החיצונית הגבוהה בעולם; כרטיס נפרד נקנה במקום או במיני-אפליקציה ביום עצמו</div>
+</div>
+<div class="after-item">
+  <span class="badge badge-must">MUST</span><span class="badge badge-book">הזמנה: מראש</span>
+  <span class="title">יואנג'יאג'יה, הר הללויה (Avatar peaks) וגשר האבן הטבעי</span>
+  <div class="desc">התצפיות המפורסמות של עמודי הקארסט; שבילים שטוחים, קלים להליכה. כניסה לפארק הלאומי (4 ימים רצופים) חובה להזמין מראש</div>
+</div>
+<div class="day-heading">יום 3</div><div class="after-item">
+  <span class="badge badge-nice">NICE</span>
+  <span class="title">הר טיאנז'י (Tianzi Mountain) ברכבל נפרד</span>
+  <div class="desc">תצפיות פנורמיות נוספות; כניסה כלולה בכרטיס הפארק, כרטיס הרכבל נקנה במקום</div>
+</div>
+<div class="after-item">
+  <span class="badge badge-must">MUST</span>
+  <span class="title">נחל שוט הזהב (Golden Whip Stream)</span>
+  <div class="desc">מסלול הליכה מישורי אחרי התצפיות מלמעלה; המון קופים חופשיים סביב</div>
+</div>
+<div class="after-item">
+  <span class="badge badge-nice">NICE</span>
+  <span class="title">הגשר הזכוכית של ג'אנגג'יאג'יה (קניון גרנד)</span>
+  <div class="desc">אטרקציה נפרדת באזור אחר – שווה יום/חצי יום נוסף אם יש זמן</div>
+</div>
+<div class="after-item">
+  <span class="badge badge-nice">NICE</span>
+  <span class="title">ארוחה בכפר טוג'יה מקומי</span>
+  <div class="desc">טעם אמיתי של האזור בין הפעילויות</div>
+</div>
+
+
+
+<h2>שווקים ולילות שוק</h2>
+
+<div class="after-item">
+  <span class="badge badge-must">MUST</span>
+  <span class="badge badge-night">שוק לילה</span>
+  <span class="title">רחוב הואורונג (后溶街, Hourong Street)</span>
+  <div class="desc">'חדר האוכל הלילי של הצעירים המקומיים' – מעל 100 דוכנים, חטיפים מכל סין לצד ספיישלים מקומיים של הונאן/טוג'יה. הכי חי 19:00-22:00</div>
+</div>
+<div class="after-item">
+  <span class="badge badge-nice">NICE</span>
+  <span class="badge badge-night">שוק לילה</span>
+  <span class="title">רחוב האוכל של השער הדרומי (South Gate Food Street), העיר התחתית</span>
+  <div class="desc">אלטרנטיבה ותיקה ומוכרת יותר להואורונג, גם היא בעיר התחתית (יונגדינג)</div>
+</div>
+
+<h2>אוכל לטעום:</h2>
+<div class="food-note">המטבח המקומי הוא של מיעוט הטוג'יה (Tujia) ומחוז שיאנגשי – שונה ואמיתי, לא רק 'אוכל סיני כללי'</div>
+<table class="food-table">
+<tr><th>עברית</th><th>English</th><th>中文</th><th>דירוג</th><th>פרטים</th></tr>
+<tr>
+  <td>סאנשיאגו ('שלושה בסיר אחד')</td>
+  <td><span class="en">Sanxiaguo</span></td>
+  <td><span class="zh">三下锅</span></td>
+  <td><span class="badge badge-must">MUST</span></td>
+  <td>קרביים, טריפה וירקות מבושלים יחד; המנה הנפוצה ביותר במסעדות המקומיות</td>
+  
+</tr>
+<tr>
+  <td>בייקון טוג'יה מעושן</td>
+  <td><span class="en">Tujia Smoked Bacon</span></td>
+  <td><span class="zh">腊肉</span></td>
+  <td><span class="badge badge-nice">NICE</span></td>
+  <td>חזיר כבוש במלח ומעושן על אש</td>
+  
+</tr>
+<tr>
+  <td>טופו דם שיאנגשי</td>
+  <td><span class="en">Xiangxi Blood Tofu</span></td>
+  <td><span class="zh">血豆腐</span></td>
+  <td><span class="badge badge-nice">NICE</span></td>
+  <td>עוגת טופו ודם חזיר, מטוגנת ומוגשת ברוטב חריף</td>
+  
+</tr>
+<tr>
+  <td>ציבה טוג'יה</td>
+  <td><span class="en">Tujia Ciba</span></td>
+  <td><span class="zh">糍粑</span></td>
+  <td><span class="badge badge-nice">NICE</span></td>
+  <td>עוגות אורז דביק מטוגנות במחבת</td>
+  
+</tr>
+</table>
+
+<div class="nav">
+  <a href="00-overview.html">↩ סקירה כללית</a>
+  | <a href="00b-calendar.html">לוח שנה יומי</a>
+  | <a href="05-chongqing.html">← צ'ונגצ'ינג</a>
+  | <a href="07-yangshuo.html">יאנגשואו →</a>
+</div>
+
+</body>
+</html>

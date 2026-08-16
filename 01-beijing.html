@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>בייג'ינג – תוכנית מפורטת</title>
+<style>
+  body { font-family: 'Segoe UI', Arial, 'Noto Sans Hebrew', sans-serif; direction: rtl; text-align: right; max-width: 900px; margin: 40px auto; padding: 0 20px; color: #1a1a1a; line-height: 1.6; }
+  h1 { font-size: 26px; border-bottom: 3px solid #2b6cb0; padding-bottom: 10px; }
+  h2 { color: #2b6cb0; font-size: 19px; margin-top: 32px; border-bottom: 1px solid #cbd5e0; padding-bottom: 6px; }
+  h3 { font-size: 18px; color: #1a365d; margin-top: 28px; }
+  .intro { font-style: italic; color: #444; }
+  table { width: 100%; border-collapse: collapse; margin: 16px 0; direction: rtl; }
+  th, td { border: 1px solid #cbd5e0; padding: 8px 10px; text-align: right; font-size: 14px; vertical-align: top; }
+  th { background: #e2e8f0; font-weight: bold; }
+  ul { margin: 6px 0 18px 0; padding-right: 22px; }
+  li { margin-bottom: 4px; }
+  .label { font-weight: bold; margin-top: 14px; display: block; }
+  .note li { margin-bottom: 8px; }
+  .food-note { font-size: 13px; color: #555; margin: 4px 0 12px 0; }
+  table.food-table th, table.food-table td { font-size: 13px; }
+  .badge { display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: 12px; font-weight: bold; margin-left: 4px; }
+  .badge-must { background: #fde2e2; color: #9b2c2c; }
+  .badge-nice { background: #e6f4ea; color: #276749; }
+  .badge-book { background: #ede9fe; color: #5b21b6; }
+  .badge-spa { background: #e0e7ff; color: #363594; }
+  .badge-tech { background: #fef3c7; color: #92400e; }
+  .badge-night { background: #1e293b; color: #e2e8f0; }
+  .badge-day { background: #fef9c3; color: #854d0e; }
+  .zh { font-family: 'Noto Sans CJK SC', 'PingFang SC', 'Heiti SC', sans-serif; direction: ltr; }
+  .en { direction: ltr; display: inline-block; }
+  .main-box { background: #ebf4ff; border-right: 4px solid #2b6cb0; padding: 10px 14px; margin: 10px 0 16px 0; }
+  .main-box .main-label { font-size: 12px; color: #2b6cb0; font-weight: bold; margin-bottom: 4px; }
+  .main-box div.item { font-weight: bold; margin-bottom: 2px; }
+  .after-item { margin-bottom: 10px; }
+  .after-item .title { font-weight: bold; }
+  .after-item .desc { font-size: 13px; color: #555; margin-top: 2px; }
+  .day-heading { font-weight: bold; color: #1a365d; font-size: 15px; margin: 16px 0 6px 0; border-bottom: 1px dashed #cbd5e0; padding-bottom: 3px; }
+  table.food-table { table-layout: fixed; }
+  table.food-table th:nth-child(1), table.food-table td:nth-child(1) { width: 13%; }
+  table.food-table th:nth-child(2), table.food-table td:nth-child(2) { width: 15%; }
+  table.food-table th:nth-child(3), table.food-table td:nth-child(3) { width: 9%; }
+  table.food-table th:nth-child(4), table.food-table td:nth-child(4) { width: 7%; }
+  table.food-table th:nth-child(5), table.food-table td:nth-child(5) { width: 30%; }
+  table.food-table th:nth-child(6), table.food-table td:nth-child(6) { width: 26%; }
+  .venue { color: #1a5490; font-size: 12.5px; }
+  table.chains-table { table-layout: fixed; }
+  table.chains-table th:nth-child(1), table.chains-table td:nth-child(1) { width: 14%; }
+  table.chains-table th:nth-child(2), table.chains-table td:nth-child(2) { width: 16%; }
+  table.chains-table th:nth-child(3), table.chains-table td:nth-child(3) { width: 12%; }
+  table.chains-table th:nth-child(4), table.chains-table td:nth-child(4) { width: 8%; }
+  table.chains-table th:nth-child(5), table.chains-table td:nth-child(5) { width: 50%; }
+  .chains-table td, .chains-table th { font-size: 13px; }
+  .bonus-item { margin-bottom: 8px; }
+  .bonus-item .title { font-weight: bold; }
+  .bonus-item .desc { font-size: 13px; color: #555; margin-top: 2px; }
+  .summary-box { background: #f0fdf4; border-right: 4px solid #276749; padding: 12px 16px; margin: 12px 0 20px 0; }
+  .summary-box ul { margin: 6px 0 0 0; }
+  .summary-box li { margin-bottom: 5px; }
+  .callout { background: #fef3c7; border-right: 4px solid #b45309; padding: 12px 14px; margin: 14px 0 18px 0; font-size: 14px; color: #78350f; }
+  .nav { margin: 18px 0; padding: 10px 14px; background: #f7fafc; border: 1px solid #e2e8f0; border-radius: 6px; font-size: 14px; }
+  .nav a { color: #2b6cb0; text-decoration: none; margin: 0 6px; }
+  .nav a:hover { text-decoration: underline; }
+  .toc { columns: 2; column-gap: 24px; }
+  .toc li { margin-bottom: 6px; }
+</style>
+</head>
+<body>
+
+<h1>בייג'ינג (6 לילות)</h1>
+<div class="nav">
+  <a href="00-overview.html">↩ סקירה כללית</a>
+  | <a href="00b-calendar.html">לוח שנה יומי</a>
+  
+  | <a href="02-xian.html">שיאן →</a>
+</div>
+<p class="intro">יעד הפתיחה של הטיול – בירת סין, עשירה באתרים היסטוריים ובאטרקציות מודרניות.</p>
+
+<span class="label">העיקר:</span>
+<div class="main-box">
+<div class="item">החומה הסינית</div>
+<div class="item">העיר האסורה</div>
+<div class="item">יום שלם בפארק יוניברסל סטודיוס</div>
+</div>
+
+<span class="label">ומה עושים אחר כך:</span>
+<div class="after-item">
+  <span class="badge badge-must">MUST</span>
+  <span class="title">ארמון הקיץ (Summer Palace)</span>
+  <div class="desc">שווה יום שלם בפני עצמו – לא רק תוספת קטנה אחרי אתר אחר</div>
+</div>
+<div class="after-item">
+  <span class="badge badge-must">MUST</span>
+  <span class="title">מקדש השמיים (Temple of Heaven)</span>
+  <div class="desc">מתאים מצוין כתוספת קלה ומהירה אחרי החומה, אם חוזרים מוקדם אחר הצהריים</div>
+</div>
+<div class="after-item">
+  <span class="badge badge-nice">NICE</span>
+  <span class="title">הוטונג ורכיבת ריקשה סביב אגם הוהאי, לפנות ערב</span>
+  <div class="desc">חוויה מקומית רגועה, טובה בדיוק בשעה שחוזרים מהחומה</div>
+</div>
+<div class="after-item">
+  <span class="badge badge-nice">NICE</span>
+  <span class="title">רובע האמנות 798</span>
+  <div class="desc">צד מודרני ופחות תיירותי של העיר, טוב לפרק זמן פנוי</div>
+</div>
+<div class="after-item">
+  <span class="badge badge-nice">NICE</span>
+  <span class="title">ערב ברווז פקין ב-Siji Minfu (או Dadong/Quanjude)</span>
+  <div class="desc">סגירת יום נעימה, לא חייב להיות בערב הראשון</div>
+</div>
+
+<span class="label">בונוס: ספא 24 שעות / קניות טכנולוגיה:</span>
+<div class="bonus-item">
+  <span class="badge badge-spa">SPA</span>
+  <span class="title">Shuiguo Tangquan (水果温泉)</span>
+  <div class="desc">ספא 24 שעות, כרטיס יום כ-$42 עם משקאות/פירות חופשי, סאונה ובריכות; אפשר גם ללון בערב באזורי מנוחה</div>
+</div>
+<div class="bonus-item">
+  <span class="badge badge-spa">SPA</span>
+  <span class="title">No.8 Hot Springs Club (八号温泉会所)</span>
+  <div class="desc">פועל 24 שעות, כניסה כ-$28 (בופה בתשלום נוסף)</div>
+</div>
+
+<h2>שווקים ולילות שוק</h2>
+
+<div class="after-item">
+  <span class="badge badge-must">MUST</span>
+  <span class="badge badge-night">שוק לילה</span>
+  <span class="title">רחוב הרוחות (Ghost Street / Guijie, 簋街)</span>
+  <div class="desc">קילומטר שלם של פנסים אדומים ומעל 150 מסעדות פתוחות עד 4 לפנות בוקר – סרטני נהר חריפים, הוט פוט, שיפודים על האש. הכי תוסס בין 20:00 לחצות, במיוחד בסופ״ש.</div>
+</div>
+<div class="after-item">
+  <span class="badge badge-nice">NICE</span>
+  <span class="badge badge-night">שוק לילה</span>
+  <span class="title">רחוב הנשנושים ואנגפוג'ינג (Wangfujing Snack Street)</span>
+  <div class="desc">פחות 'שוק רחוב אקזוטי' ויותר פודקורט מודרני היום (אחרי סגירת שוק דונגחואמן הישן) – עדיין כיף לשעה, אבל אל תצפו לחוויית שוק לילה קלאסית</div>
+</div>
+<div class="after-item">
+  <span class="badge badge-must">MUST</span>
+  <span class="badge badge-day">שוק יום</span>
+  <span class="title">שוק העתיקות פאנג'יאיואן (Panjiayuan Antiques Market)</span>
+  <div class="desc">השוק הכי גדול לעתיקות/יד-שנייה/אספנות בסין – הכי חי בסופ״ש בבוקר מוקדם (משעה 6-7); ביום חול שקט ומצומצם יותר</div>
+</div>
+
+<h2>אוכל לטעום:</h2>
+
+<table class="food-table">
+<tr><th>עברית</th><th>English</th><th>中文</th><th>דירוג</th><th>פרטים</th><th>מקום מומלץ</th></tr>
+<tr>
+  <td>ברווז פקין</td>
+  <td><span class="en">Peking Duck</span></td>
+  <td><span class="zh">北京烤鸭</span></td>
+  <td><span class="badge badge-must">MUST</span></td>
+  <td>המנה המזוהה ביותר עם בייג'ינג</td>
+  <td class="venue">Siji Minfu (הכי אהוב כיום, אין הזמנות – לצפות לתור) / Quanjude (תור ממוספר, ההיסטורי) / Dadong (יקר יותר, מעודן)</td>
+</tr>
+<tr>
+  <td>טאנגחולו</td>
+  <td><span class="en">Tanghulu</span></td>
+  <td><span class="zh">糖葫芦</span></td>
+  <td><span class="badge badge-must">MUST</span></td>
+  <td>שיפודי עוזרר מסוכרים, החטיף הרחוב האיקוני של בייג'ינג</td>
+  <td class="venue">-</td>
+</tr>
+<tr>
+  <td>הוט פוט בייג'ינגי (כבש בסיר נחושת)</td>
+  <td><span class="en">Instant-Boiled Mutton Hot Pot</span></td>
+  <td><span class="zh">涮羊肉</span></td>
+  <td><span class="badge badge-nice">NICE</span></td>
+  <td>כבש מבושל בסיר נחושת מסורתי</td>
+  <td class="venue">-</td>
+</tr>
+<tr>
+  <td>נודלס ג'אג'יאנג-מיאן</td>
+  <td><span class="en">Zhajiangmian</span></td>
+  <td><span class="zh">炸酱面</span></td>
+  <td><span class="badge badge-nice">NICE</span></td>
+  <td>נודלס ברוטב שעועית מותססת ובשר טחון</td>
+  <td class="venue">-</td>
+</tr>
+<tr>
+  <td>דוג'ר (משקה פולי מונג מותסס)</td>
+  <td><span class="en">Douzhir</span></td>
+  <td><span class="zh">豆汁儿</span></td>
+  <td><span class="badge badge-nice">NICE</span></td>
+  <td>משקה מפורסם כ'קשה לאכול', נאכל עם ג'יאוצ'ואן (焦圈) לצדו</td>
+  <td class="venue">-</td>
+</tr>
+<tr>
+  <td>דאליאן חוושאו</td>
+  <td><span class="en">Dalian Huoshao</span></td>
+  <td><span class="zh">褡裢火烧</span></td>
+  <td><span class="badge badge-nice">NICE</span></td>
+  <td>מאפה בשר מקופל ומטוגן, המקביל הבייג'ינגי לבורקס; באזור דשילאן/ציאנמן</td>
+  <td class="venue">-</td>
+</tr>
+<tr>
+  <td>ג'ינג ג'יאנג רו סי</td>
+  <td><span class="en">Jing Jiang Rou Si</span></td>
+  <td><span class="zh">京酱肉丝</span></td>
+  <td><span class="badge badge-nice">NICE</span></td>
+  <td>חזיר קצוץ ברוטב מתוק, נאכל בפנקייק דק</td>
+  <td class="venue">-</td>
+</tr>
+<tr>
+  <td>באודו</td>
+  <td><span class="en">Baodu</span></td>
+  <td><span class="zh">爆肚</span></td>
+  <td><span class="badge badge-nice">NICE</span></td>
+  <td>קרביים מוקפצים</td>
+  <td class="venue">-</td>
+</tr>
+<tr>
+  <td>צ'אוגאן</td>
+  <td><span class="en">Chaogan</span></td>
+  <td><span class="zh">炒肝</span></td>
+  <td><span class="badge badge-nice">NICE</span></td>
+  <td>כבד ומעי מבושלים ברוטב עמילני, ארוחת בוקר מקומית קלאסית</td>
+  <td class="venue">-</td>
+</tr>
+</table>
+
+<div class="nav">
+  <a href="00-overview.html">↩ סקירה כללית</a>
+  | <a href="00b-calendar.html">לוח שנה יומי</a>
+  
+  | <a href="02-xian.html">שיאן →</a>
+</div>
+
+</body>
+</html>

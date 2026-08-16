@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>הונג קונג – תוכנית מפורטת</title>
+<style>
+  body { font-family: 'Segoe UI', Arial, 'Noto Sans Hebrew', sans-serif; direction: rtl; text-align: right; max-width: 900px; margin: 40px auto; padding: 0 20px; color: #1a1a1a; line-height: 1.6; }
+  h1 { font-size: 26px; border-bottom: 3px solid #2b6cb0; padding-bottom: 10px; }
+  h2 { color: #2b6cb0; font-size: 19px; margin-top: 32px; border-bottom: 1px solid #cbd5e0; padding-bottom: 6px; }
+  h3 { font-size: 18px; color: #1a365d; margin-top: 28px; }
+  .intro { font-style: italic; color: #444; }
+  table { width: 100%; border-collapse: collapse; margin: 16px 0; direction: rtl; }
+  th, td { border: 1px solid #cbd5e0; padding: 8px 10px; text-align: right; font-size: 14px; vertical-align: top; }
+  th { background: #e2e8f0; font-weight: bold; }
+  ul { margin: 6px 0 18px 0; padding-right: 22px; }
+  li { margin-bottom: 4px; }
+  .label { font-weight: bold; margin-top: 14px; display: block; }
+  .note li { margin-bottom: 8px; }
+  .food-note { font-size: 13px; color: #555; margin: 4px 0 12px 0; }
+  table.food-table th, table.food-table td { font-size: 13px; }
+  .badge { display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: 12px; font-weight: bold; margin-left: 4px; }
+  .badge-must { background: #fde2e2; color: #9b2c2c; }
+  .badge-nice { background: #e6f4ea; color: #276749; }
+  .badge-book { background: #ede9fe; color: #5b21b6; }
+  .badge-spa { background: #e0e7ff; color: #363594; }
+  .badge-tech { background: #fef3c7; color: #92400e; }
+  .badge-night { background: #1e293b; color: #e2e8f0; }
+  .badge-day { background: #fef9c3; color: #854d0e; }
+  .zh { font-family: 'Noto Sans CJK SC', 'PingFang SC', 'Heiti SC', sans-serif; direction: ltr; }
+  .en { direction: ltr; display: inline-block; }
+  .main-box { background: #ebf4ff; border-right: 4px solid #2b6cb0; padding: 10px 14px; margin: 10px 0 16px 0; }
+  .main-box .main-label { font-size: 12px; color: #2b6cb0; font-weight: bold; margin-bottom: 4px; }
+  .main-box div.item { font-weight: bold; margin-bottom: 2px; }
+  .after-item { margin-bottom: 10px; }
+  .after-item .title { font-weight: bold; }
+  .after-item .desc { font-size: 13px; color: #555; margin-top: 2px; }
+  .day-heading { font-weight: bold; color: #1a365d; font-size: 15px; margin: 16px 0 6px 0; border-bottom: 1px dashed #cbd5e0; padding-bottom: 3px; }
+  table.food-table { table-layout: fixed; }
+  table.food-table th:nth-child(1), table.food-table td:nth-child(1) { width: 13%; }
+  table.food-table th:nth-child(2), table.food-table td:nth-child(2) { width: 15%; }
+  table.food-table th:nth-child(3), table.food-table td:nth-child(3) { width: 9%; }
+  table.food-table th:nth-child(4), table.food-table td:nth-child(4) { width: 7%; }
+  table.food-table th:nth-child(5), table.food-table td:nth-child(5) { width: 30%; }
+  table.food-table th:nth-child(6), table.food-table td:nth-child(6) { width: 26%; }
+  .venue { color: #1a5490; font-size: 12.5px; }
+  table.chains-table { table-layout: fixed; }
+  table.chains-table th:nth-child(1), table.chains-table td:nth-child(1) { width: 14%; }
+  table.chains-table th:nth-child(2), table.chains-table td:nth-child(2) { width: 16%; }
+  table.chains-table th:nth-child(3), table.chains-table td:nth-child(3) { width: 12%; }
+  table.chains-table th:nth-child(4), table.chains-table td:nth-child(4) { width: 8%; }
+  table.chains-table th:nth-child(5), table.chains-table td:nth-child(5) { width: 50%; }
+  .chains-table td, .chains-table th { font-size: 13px; }
+  .bonus-item { margin-bottom: 8px; }
+  .bonus-item .title { font-weight: bold; }
+  .bonus-item .desc { font-size: 13px; color: #555; margin-top: 2px; }
+  .summary-box { background: #f0fdf4; border-right: 4px solid #276749; padding: 12px 16px; margin: 12px 0 20px 0; }
+  .summary-box ul { margin: 6px 0 0 0; }
+  .summary-box li { margin-bottom: 5px; }
+  .callout { background: #fef3c7; border-right: 4px solid #b45309; padding: 12px 14px; margin: 14px 0 18px 0; font-size: 14px; color: #78350f; }
+  .nav { margin: 18px 0; padding: 10px 14px; background: #f7fafc; border: 1px solid #e2e8f0; border-radius: 6px; font-size: 14px; }
+  .nav a { color: #2b6cb0; text-decoration: none; margin: 0 6px; }
+  .nav a:hover { text-decoration: underline; }
+  .toc { columns: 2; column-gap: 24px; }
+  .toc li { margin-bottom: 6px; }
+</style>
+</head>
+<body>
+
+<h1>הונג קונג (4 לילות)</h1>
+<div class="nav">
+  <a href="00-overview.html">↩ סקירה כללית</a>
+  | <a href="00b-calendar.html">לוח שנה יומי</a>
+  | <a href="08-shenzhen.html">← שנזן</a>
+  | <a href="10-hangzhou.html">האנגג'ואו →</a>
+</div>
+<p class="intro">קפיצה קלה משנזן (רכבת של רבע שעה) לעיר אחרת לגמרי – מערבית-מזרחית, קולוניאלית-מודרנית. פטורה מאשרה לישראלים (עד 90 יום). כולל גיחת יום למקאו (SAR נוסף, גם הוא פטור מאשרה לישראלים) – ראו יום 4.</p>
+
+<span class="label">העיקר:</span>
+<div class="main-box">
+<div class="item">ויקטוריה פיק ברכבל הישן (Peak Tram, פועל כ-130 שנה) + שקיעה/נוף לילה על קו הרקיע</div>
+<div class="item">מעבורת הכוכב (Star Ferry) בין האי לקאולון</div>
+</div>
+
+<span class="label">ומה עושים אחר כך:</span>
+<div class="day-heading">יום 1</div><div class="after-item">
+  <span class="badge badge-must">MUST</span>
+  <span class="title">טיילת צים שא צוי וה-Symphony of Lights ב-20:00</span>
+  <div class="desc">מופע אור-לייזר-מוזיקה על קו הרקיע מעל הנמל</div>
+</div>
+<div class="day-heading">יום 2</div><div class="after-item">
+  <span class="badge badge-must">MUST</span>
+  <span class="title">הבודהה הגדול (Tian Tan Buddha) ורכבל Ngong Ping 360 באי לנטאו</span>
+  <div class="desc">רכבל 25 דקות, 268 מדרגות לפסל הבודהה המושבי הגדול בעולם; אפשר לשלב ארוחה צמחונית במנזר Po Lin</div>
+</div>
+<div class="after-item">
+  <span class="badge badge-nice">NICE</span>
+  <span class="title">כפר הדייגים הצף טאי או (Tai O), אי לנטאו</span>
+  <div class="desc">טוב לשלב באותו יום כמו הבודהה הגדול</div>
+</div>
+<div class="day-heading">יום 3</div><div class="after-item">
+  <span class="badge badge-must">MUST</span>
+  <span class="title">שוק הלילה של רחוב המקדש (Temple Street), קאולון</span>
+  <div class="desc">שוק הלילה הכי קלאסי בהונג קונג – בגדים/גאדג'טים/מזכרות, מגידי עתידות, ודוכני אוכל רחוב (דגני ים, מנות פנג'י). הכי תוסס 19:00-23:00</div>
+</div>
+<div class="after-item">
+  <span class="badge badge-nice">NICE</span>
+  <span class="title">מונג קוק / קוזוויי ביי לקניות</span>
+  <div class="desc">אזורי הקניות/רחוב האופייניים ביותר של הונג קונג</div>
+</div>
+<div class="day-heading">יום 4</div><div class="after-item">
+  <span class="badge badge-must">MUST</span><span class="badge badge-book">הזמנה: מומלץ מראש (מקום/שעה)</span>
+  <span class="title">גיחת יום למקאו – מעבורת מהירה (TurboJet/Cotai Water Jet), כ-55-70 דקות כל כיוון</span>
+  <div class="desc">היוצא מטרמינל המעבורות בהונג קונג (Sheung Wan) או מקאולון, מגיע ל-Outer Harbour / Taipa. אין השפעה על אשרת סין – מקאו הוא SAR נפרד כמו הונג קונג, אז מדובר במעבר בין שני אזורים חופשיים בלי לגעת ביבשת.</div>
+</div>
+<div class="after-item">
+  <span class="badge badge-must">MUST</span>
+  <span class="title">הרובע ההיסטורי הפורטוגזי: Ruins of St. Paul's, כיכר סנאדו, מבצר מונטה</span>
+  <div class="desc">אתר מורשת עולמית של אונסק"ו – שילוב ייחודי של אדריכלות פורטוגזית וסינית</div>
+</div>
+<div class="after-item">
+  <span class="badge badge-nice">NICE</span>
+  <span class="title">מטבח מקאונזי (פורטוגזי-סיני): טארט ביצה פורטוגזי, בקלאאו, אפריקן צ'יקן</span>
+  <div class="desc">אפשר לשלב ליד הרובע ההיסטורי</div>
+</div>
+<div class="after-item">
+  <span class="badge badge-nice">NICE</span>
+  <span class="title">קזינו/הקאסינו הגדולים (Venetian, Grand Lisboa) – אופציונלי</span>
+  <div class="desc">מקאו היא 'לאס וגאס של אסיה'; שווה הצצה גם בלי להמר</div>
+</div>
+
+
+
+<h2>שווקים ולילות שוק</h2>
+
+<div class="after-item">
+  <span class="badge badge-must">MUST</span>
+  <span class="badge badge-night">שוק לילה</span>
+  <span class="title">שוק הלילה של רחוב המקדש (Temple Street)</span>
+  <div class="desc">כבר ברשימה למעלה (יום 3) – השוק שהכי קרוב לחוויית תאילנד שאהבתם</div>
+</div>
+<div class="after-item">
+  <span class="badge badge-must">MUST</span>
+  <span class="badge badge-day">שוק יום</span>
+  <span class="title">מסלול השווקים של מונג קוק: שוק הגברות ← Sneakers Street ← שוק דגי הזהב ← שוק הפרחים ← גן הציפורים</span>
+  <div class="desc">כל התחנות במרחק הליכה של כ-10 דקות זו מזו – טונג צ'וי סטריט (בגדים/אביזרים זולים), רחוב נעליים, אקווריומים/דגי זהב צבעוניים, פרחים טריים, וכלובי ציפורים עם קשישים משחקים שחמט לידם. שוק הגברות פתוח כ-11:00-23:00, כך שעובד גם כשוק יום וגם ערב</div>
+</div>
+<div class="after-item">
+  <span class="badge badge-nice">NICE</span>
+  <span class="badge badge-day">שוק יום</span>
+  <span class="title">שוק הירקן (Jade Market), קאנסו סטריט</span>
+  <div class="desc">מאות דוכני ירקן – אבן/תכשיטים/פסלונים; טוב לשלב באותו אזור כמו טמפל סטריט</div>
+</div>
+
+<h2>אוכל לטעום:</h2>
+
+<table class="food-table">
+<tr><th>עברית</th><th>English</th><th>中文</th><th>דירוג</th><th>פרטים</th></tr>
+<tr>
+  <td>דים סאם</td>
+  <td><span class="en">Dim Sum</span></td>
+  <td><span class="zh">點心</span></td>
+  <td><span class="badge badge-must">MUST</span></td>
+  <td>הא גאו, סיו מאי, לחמניות בשר, מגילות אורז</td>
+  
+</tr>
+<tr>
+  <td>אווז צלוי</td>
+  <td><span class="en">Roast Goose</span></td>
+  <td><span class="zh">燒鵝</span></td>
+  <td><span class="badge badge-must">MUST</span></td>
+  <td>עור פריך, בשר עסיסי, מוגש פרוס עם רוטב שזיפים; מנת דגל קנטונזית</td>
+  
+</tr>
+<tr>
+  <td>נודלס וונטון</td>
+  <td><span class="en">Wonton Noodles</span></td>
+  <td><span class="zh">雲吞麵</span></td>
+  <td><span class="badge badge-nice">NICE</span></td>
+  <td>כופתאות שרימפס/חזיר דקות במרק צלול</td>
+  
+</tr>
+<tr>
+  <td>טארט ביצה הונג קונגי</td>
+  <td><span class="en">Egg Tart</span></td>
+  <td><span class="zh">蛋撻</span></td>
+  <td><span class="badge badge-nice">NICE</span></td>
+  <td>בצק עלים פריך עם קרם ביצה חלק</td>
+  
+</tr>
+<tr>
+  <td>תה חלב הונג קונגי</td>
+  <td><span class="en">Hong Kong Milk Tea</span></td>
+  <td><span class="zh">港式奶茶</span></td>
+  <td><span class="badge badge-nice">NICE</span></td>
+  <td>תה שחור מסונן, מוגש עם חלב מרוכז</td>
+  
+</tr>
+</table>
+
+<div class="nav">
+  <a href="00-overview.html">↩ סקירה כללית</a>
+  | <a href="00b-calendar.html">לוח שנה יומי</a>
+  | <a href="08-shenzhen.html">← שנזן</a>
+  | <a href="10-hangzhou.html">האנגג'ואו →</a>
+</div>
+
+</body>
+</html>

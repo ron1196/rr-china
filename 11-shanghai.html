@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>שנגחאי – תוכנית מפורטת</title>
+<style>
+  body { font-family: 'Segoe UI', Arial, 'Noto Sans Hebrew', sans-serif; direction: rtl; text-align: right; max-width: 900px; margin: 40px auto; padding: 0 20px; color: #1a1a1a; line-height: 1.6; }
+  h1 { font-size: 26px; border-bottom: 3px solid #2b6cb0; padding-bottom: 10px; }
+  h2 { color: #2b6cb0; font-size: 19px; margin-top: 32px; border-bottom: 1px solid #cbd5e0; padding-bottom: 6px; }
+  h3 { font-size: 18px; color: #1a365d; margin-top: 28px; }
+  .intro { font-style: italic; color: #444; }
+  table { width: 100%; border-collapse: collapse; margin: 16px 0; direction: rtl; }
+  th, td { border: 1px solid #cbd5e0; padding: 8px 10px; text-align: right; font-size: 14px; vertical-align: top; }
+  th { background: #e2e8f0; font-weight: bold; }
+  ul { margin: 6px 0 18px 0; padding-right: 22px; }
+  li { margin-bottom: 4px; }
+  .label { font-weight: bold; margin-top: 14px; display: block; }
+  .note li { margin-bottom: 8px; }
+  .food-note { font-size: 13px; color: #555; margin: 4px 0 12px 0; }
+  table.food-table th, table.food-table td { font-size: 13px; }
+  .badge { display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: 12px; font-weight: bold; margin-left: 4px; }
+  .badge-must { background: #fde2e2; color: #9b2c2c; }
+  .badge-nice { background: #e6f4ea; color: #276749; }
+  .badge-book { background: #ede9fe; color: #5b21b6; }
+  .badge-spa { background: #e0e7ff; color: #363594; }
+  .badge-tech { background: #fef3c7; color: #92400e; }
+  .badge-night { background: #1e293b; color: #e2e8f0; }
+  .badge-day { background: #fef9c3; color: #854d0e; }
+  .zh { font-family: 'Noto Sans CJK SC', 'PingFang SC', 'Heiti SC', sans-serif; direction: ltr; }
+  .en { direction: ltr; display: inline-block; }
+  .main-box { background: #ebf4ff; border-right: 4px solid #2b6cb0; padding: 10px 14px; margin: 10px 0 16px 0; }
+  .main-box .main-label { font-size: 12px; color: #2b6cb0; font-weight: bold; margin-bottom: 4px; }
+  .main-box div.item { font-weight: bold; margin-bottom: 2px; }
+  .after-item { margin-bottom: 10px; }
+  .after-item .title { font-weight: bold; }
+  .after-item .desc { font-size: 13px; color: #555; margin-top: 2px; }
+  .day-heading { font-weight: bold; color: #1a365d; font-size: 15px; margin: 16px 0 6px 0; border-bottom: 1px dashed #cbd5e0; padding-bottom: 3px; }
+  table.food-table { table-layout: fixed; }
+  table.food-table th:nth-child(1), table.food-table td:nth-child(1) { width: 13%; }
+  table.food-table th:nth-child(2), table.food-table td:nth-child(2) { width: 15%; }
+  table.food-table th:nth-child(3), table.food-table td:nth-child(3) { width: 9%; }
+  table.food-table th:nth-child(4), table.food-table td:nth-child(4) { width: 7%; }
+  table.food-table th:nth-child(5), table.food-table td:nth-child(5) { width: 30%; }
+  table.food-table th:nth-child(6), table.food-table td:nth-child(6) { width: 26%; }
+  .venue { color: #1a5490; font-size: 12.5px; }
+  table.chains-table { table-layout: fixed; }
+  table.chains-table th:nth-child(1), table.chains-table td:nth-child(1) { width: 14%; }
+  table.chains-table th:nth-child(2), table.chains-table td:nth-child(2) { width: 16%; }
+  table.chains-table th:nth-child(3), table.chains-table td:nth-child(3) { width: 12%; }
+  table.chains-table th:nth-child(4), table.chains-table td:nth-child(4) { width: 8%; }
+  table.chains-table th:nth-child(5), table.chains-table td:nth-child(5) { width: 50%; }
+  .chains-table td, .chains-table th { font-size: 13px; }
+  .bonus-item { margin-bottom: 8px; }
+  .bonus-item .title { font-weight: bold; }
+  .bonus-item .desc { font-size: 13px; color: #555; margin-top: 2px; }
+  .summary-box { background: #f0fdf4; border-right: 4px solid #276749; padding: 12px 16px; margin: 12px 0 20px 0; }
+  .summary-box ul { margin: 6px 0 0 0; }
+  .summary-box li { margin-bottom: 5px; }
+  .callout { background: #fef3c7; border-right: 4px solid #b45309; padding: 12px 14px; margin: 14px 0 18px 0; font-size: 14px; color: #78350f; }
+  .nav { margin: 18px 0; padding: 10px 14px; background: #f7fafc; border: 1px solid #e2e8f0; border-radius: 6px; font-size: 14px; }
+  .nav a { color: #2b6cb0; text-decoration: none; margin: 0 6px; }
+  .nav a:hover { text-decoration: underline; }
+  .toc { columns: 2; column-gap: 24px; }
+  .toc li { margin-bottom: 6px; }
+</style>
+</head>
+<body>
+
+<h1>שנגחאי (אופציה א׳: 4 / אופציה ב׳: 7 לילות)</h1>
+<div class="nav">
+  <a href="00-overview.html">↩ סקירה כללית</a>
+  | <a href="00b-calendar.html">לוח שנה יומי</a>
+  | <a href="10-hangzhou.html">← האנגג'ואו</a>
+  
+</div>
+<p class="intro">סיום מודרני ותוסס לטיול – עיר האורות, הקניות והתצפיות. אחת משתי הערים הגמישות במסלול – ראו הערת אופציה א׳/ב׳ במסמך הכללי.</p>
+
+<span class="label">העיקר:</span>
+<div class="main-box">
+<div class="item">טיילת הבאנד ונוף רקיע העיר בלילה</div>
+</div>
+
+<span class="label">ומה עושים אחר כך:</span>
+<div class="after-item">
+  <span class="badge badge-must">MUST</span>
+  <span class="title">גן יו והרובע העתיק ליד מקדש אל העיר</span>
+  <div class="desc">יומי, טוב לשלב עם קניות וטעימות ברובע</div>
+</div>
+<div class="after-item">
+  <span class="badge badge-must">MUST</span>
+  <span class="title">תצפית ממגדל שנגחאי / ג'ין מאו</span>
+  <div class="desc">הנוף מהגבוה ביותר על העיר</div>
+</div>
+<div class="after-item">
+  <span class="badge badge-nice">NICE</span>
+  <span class="title">סמטאות טיאנזיפאנג או שינטיאנדי</span>
+  <div class="desc">שיק ומודרני, קניות ובתי קפה</div>
+</div>
+<div class="after-item">
+  <span class="badge badge-nice">NICE</span>
+  <span class="title">רחובות מוצללי עצים ברובע הצרפתי הקונצסיה</span>
+  <div class="desc">הליכה רגועה, טובה לפרק זמן פנוי</div>
+</div>
+<div class="after-item">
+  <span class="badge badge-nice">NICE</span>
+  <span class="title">גיחת יום לסוג'ואו (Suzhou), אם לא נעשה מהאנגג'ואו</span>
+  <div class="desc">כ-25-40 דקות רכבת מהירה משנגחאי; גנים קלאסיים ליום שלם</div>
+</div>
+<div class="after-item">
+  <span class="badge badge-nice">NICE</span>
+  <span class="title">באופציה ב׳ (7 לילות): זמן רגוע לקניונים, חנויות אספנות (בראץ/סנטים ורטרו, מרצ'נדייז מיוטו), ומחלקות קוסמטיקה</span>
+  <div class="desc">בסיס ארוך בלי אריזת מזוודות – מתאים למי שרוצה לחרוש בנחת</div>
+</div>
+<div class="after-item">
+  <span class="badge badge-nice">NICE</span>
+  <span class="title">קניות אחרונות – קוסמטיקה, פריטי אספנות ומוצרי פופ קלטשר</span>
+  <div class="desc">מתאים לימים האחרונים של הטיול</div>
+</div>
+
+<span class="label">בונוס: ספא 24 שעות / קניות טכנולוגיה:</span>
+<div class="bonus-item">
+  <span class="badge badge-spa">SPA</span>
+  <span class="title">Shuiguo Tangquan (水果温泉) – סניף וו-ג'יאאו-צ'אנג</span>
+  <div class="desc">ספא 24 שעות, אותה רשת כמו בבייג'ינג</div>
+</div>
+<div class="bonus-item">
+  <span class="badge badge-spa">SPA</span>
+  <span class="title">Pulehui Tangquan Water World (浦乐汇·汤泉水世界)</span>
+  <div class="desc">אזור יאנגפו, ספא+בופה</div>
+</div>
+<div class="bonus-item">
+  <span class="badge badge-tech">TECH</span>
+  <span class="title">שוצ'יאהוי – Zhongjin International Plaza (百脑汇, שוקם כ-'Tech Smart Plaza')</span>
+  <div class="desc">הגרסה המצומצמת של שוק הדיגיטל הישן; קטן יותר, עדיין שווה הצצה קצרה</div>
+</div>
+
+<h2>שווקים ולילות שוק</h2>
+
+<div class="after-item">
+  <span class="badge badge-must">MUST</span>
+  <span class="badge badge-day">שוק יום</span>
+  <span class="title">בזאר גן יו (Yu Garden Bazaar)</span>
+  <div class="desc">כבר ברשימה למעלה – שוק/רובע קניות-ואוכל מרכזי, יפה גם ביום וגם מואר בפנסים בערב; שנגחאי לא באמת שימרה שוק לילה 'מסורתי' חוץ מהאזור הזה</div>
+</div>
+<div class="after-item">
+  <span class="badge badge-nice">NICE</span>
+  <span class="badge badge-night">שוק לילה</span>
+  <span class="title">רחוב וו-ג'יאנג (Wujiang Road) לאוכל רחוב מודרני</span>
+  <div class="desc">רחוב חטיפים מודרני וקומפקטי ליד נאנג'ינג רואד המערבי (תחנת מטרו West Nanjing Road) – שם מקור רשת Yang's Fry Dumpling; יותר 'רחוב נשנושים' עירוני מאשר שוק לילה קלאסי</div>
+</div>
+
+<h2>אוכל לטעום:</h2>
+
+<table class="food-table">
+<tr><th>עברית</th><th>English</th><th>中文</th><th>דירוג</th><th>פרטים</th><th>מקום מומלץ</th></tr>
+<tr>
+  <td>שיאולונגבאו</td>
+  <td><span class="en">Xiaolongbao (Soup Dumplings)</span></td>
+  <td><span class="zh">小笼包</span></td>
+  <td><span class="badge badge-must">MUST</span></td>
+  <td>המנה המזוהה ביותר עם שנגחאי</td>
+  <td class="venue">Nanxiang Mantou Dian / 南翔馒头店 בגן יו (יש תור) / Jia Jia Tang Bao (איכותי יותר, בלי תור)</td>
+</tr>
+<tr>
+  <td>שנג'יאנבאו</td>
+  <td><span class="en">Shengjianbao</span></td>
+  <td><span class="zh">生煎包</span></td>
+  <td><span class="badge badge-must">MUST</span></td>
+  <td>כופתאות חזיר מטוגנות במחבת עם בסיס פריך ומילוי עסיסי</td>
+  <td class="venue">-</td>
+</tr>
+<tr>
+  <td>חונגשאו רו</td>
+  <td><span class="en">Hongshao Rou</span></td>
+  <td><span class="zh">红烧肉</span></td>
+  <td><span class="badge badge-nice">NICE</span></td>
+  <td>חזיר בטן מבושל ברוטב סויה, יין שאושינג וסוכר קנדי</td>
+  <td class="venue">-</td>
+</tr>
+</table>
+
+<div class="nav">
+  <a href="00-overview.html">↩ סקירה כללית</a>
+  | <a href="00b-calendar.html">לוח שנה יומי</a>
+  | <a href="10-hangzhou.html">← האנגג'ואו</a>
+  
+</div>
+
+</body>
+</html>
