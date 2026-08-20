@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>מה להזמין מראש ורשתות ארציות – טיול לסין</title>
+<style>
+  body { font-family: 'Segoe UI', Arial, 'Noto Sans Hebrew', sans-serif; direction: rtl; text-align: right; max-width: 900px; margin: 40px auto; padding: 0 20px; color: #1a1a1a; line-height: 1.6; }
+  h1 { font-size: 26px; border-bottom: 3px solid #2b6cb0; padding-bottom: 10px; }
+  h2 { color: #2b6cb0; font-size: 19px; margin-top: 32px; border-bottom: 1px solid #cbd5e0; padding-bottom: 6px; }
+  h3 { font-size: 18px; color: #1a365d; margin-top: 28px; }
+  .intro { font-style: italic; color: #444; }
+  table { width: 100%; border-collapse: collapse; margin: 16px 0; direction: rtl; }
+  th, td { border: 1px solid #cbd5e0; padding: 8px 10px; text-align: right; font-size: 14px; vertical-align: top; }
+  th { background: #e2e8f0; font-weight: bold; }
+  ul { margin: 6px 0 18px 0; padding-right: 22px; }
+  li { margin-bottom: 4px; }
+  .label { font-weight: bold; margin-top: 14px; display: block; }
+  .note li { margin-bottom: 8px; }
+  .toc-main { list-style: "– "; font-size: 13px; color: #555; margin: 2px 0 10px 0; padding-right: 26px; }
+  .toc-main li { margin-bottom: 2px; }
+  .food-note { font-size: 13px; color: #555; margin: 4px 0 12px 0; }
+  table.food-table th, table.food-table td { font-size: 13px; }
+  .badge { display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: 12px; font-weight: bold; margin-left: 4px; }
+  .badge-must { background: #fde2e2; color: #9b2c2c; }
+  .badge-nice { background: #e6f4ea; color: #276749; }
+  .badge-book { background: #ede9fe; color: #5b21b6; }
+  .badge-spa { background: #e0e7ff; color: #363594; }
+  .badge-tech { background: #fef3c7; color: #92400e; }
+  .badge-night { background: #1e293b; color: #e2e8f0; }
+  .badge-day { background: #fef9c3; color: #854d0e; }
+  .badge-confirmed { background: #d1fae5; color: #065f46; }
+  .zh { font-family: 'Noto Sans CJK SC', 'PingFang SC', 'Heiti SC', sans-serif; direction: ltr; }
+  .en { direction: ltr; display: inline-block; }
+  .main-box { background: #ebf4ff; border-right: 4px solid #2b6cb0; padding: 10px 14px; margin: 10px 0 16px 0; }
+  .main-box .main-label { font-size: 12px; color: #2b6cb0; font-weight: bold; margin-bottom: 4px; }
+  .main-box div.item { font-weight: bold; margin-bottom: 2px; }
+  .after-item { margin-bottom: 10px; }
+  .after-item .title { font-weight: bold; }
+  .after-item .desc { font-size: 13px; color: #555; margin-top: 2px; }
+  .day-heading { font-weight: bold; color: #1a365d; font-size: 15px; margin: 16px 0 6px 0; border-bottom: 1px dashed #cbd5e0; padding-bottom: 3px; }
+  .extra-options-heading { color: #92400e; border-bottom: 2px solid #92400e; margin-top: 28px; font-size: 14px; }
+  table.food-table { table-layout: fixed; }
+  table.food-table th:nth-child(1), table.food-table td:nth-child(1) { width: 13%; }
+  table.food-table th:nth-child(2), table.food-table td:nth-child(2) { width: 15%; }
+  table.food-table th:nth-child(3), table.food-table td:nth-child(3) { width: 9%; }
+  table.food-table th:nth-child(4), table.food-table td:nth-child(4) { width: 7%; }
+  table.food-table th:nth-child(5), table.food-table td:nth-child(5) { width: 30%; }
+  table.food-table th:nth-child(6), table.food-table td:nth-child(6) { width: 26%; }
+  .venue { color: #1a5490; font-size: 12.5px; }
+  table.chains-table { table-layout: fixed; }
+  table.chains-table th:nth-child(1), table.chains-table td:nth-child(1) { width: 14%; }
+  table.chains-table th:nth-child(2), table.chains-table td:nth-child(2) { width: 16%; }
+  table.chains-table th:nth-child(3), table.chains-table td:nth-child(3) { width: 12%; }
+  table.chains-table th:nth-child(4), table.chains-table td:nth-child(4) { width: 8%; }
+  table.chains-table th:nth-child(5), table.chains-table td:nth-child(5) { width: 50%; }
+  .chains-table td, .chains-table th { font-size: 13px; }
+  .bonus-item { margin-bottom: 8px; }
+  .bonus-item .title { font-weight: bold; }
+  .bonus-item .desc { font-size: 13px; color: #555; margin-top: 2px; }
+  .summary-box { background: #f0fdf4; border-right: 4px solid #276749; padding: 12px 16px; margin: 12px 0 20px 0; }
+  .summary-box ul { margin: 6px 0 0 0; }
+  .summary-box li { margin-bottom: 5px; }
+  .callout { background: #fef3c7; border-right: 4px solid #b45309; padding: 12px 14px; margin: 14px 0 18px 0; font-size: 14px; color: #78350f; }
+  .nav { margin: 18px 0; padding: 10px 14px; background: #f7fafc; border: 1px solid #e2e8f0; border-radius: 6px; font-size: 14px; }
+  .nav a { color: #2b6cb0; text-decoration: none; margin: 0 6px; }
+  .nav a:hover { text-decoration: underline; }
+  .toc { columns: 2; column-gap: 24px; }
+  .toc li { margin-bottom: 6px; }
+</style>
+</head>
+<body>
+
+<h1>מה להזמין מראש, רשתות ארציות ומאכלים כלל-ארציים</h1>
+<div class="nav">
+  <a href="00-overview.html">↩ סקירה כללית</a>
+  | <a href="00b-calendar.html">לוח שנה יומי</a>
+  
+  
+</div>
+<p class="intro">שלושה חלקים שהיו הופכים את עמוד הסקירה הכללית לארוך מדי לסריקה – עברו לכאן.</p>
+
+<h2>מה להזמין מראש (לא מלונות/טיסות)</h2>
+<p class="food-note">כל הפריטים שדורשים הזמנה/רישום מראש לפי התוכנית של כל עיר, במקום אחד. עמודת "כמה זמן מראש" היא לפי המידע שנאסף לכל אתר בנפרד – לא כלל אחיד.</p>
+<table class="food-table">
+<tr><th>עיר</th><th>מה להזמין</th><th>כמה זמן מראש</th><th>פרטים</th></tr>
+<tr>
+  <td>בייג'ינג (Beijing)</td>
+  <td><span class="badge badge-must">MUST</span> יוניברסל סטודיוס – 2 כרטיסי כניסה + Express Set 5</td>
+  <td><span class="badge badge-must">כבר הוזמן ✓</span></td>
+  <td>מוזמן ומאושר בפועל לתאריך 26/8/2026 – ראו את העמוד הנפרד של יוניברסל סטודיוס</td>
+</tr>
+<tr>
+  <td>בייג'ינג (Beijing)</td>
+  <td><span class="badge badge-must">MUST</span> החומה הסינית (Great Wall, 长城) – איזה קטע: Mutianyu (מוטיאנג'ו, 慕田峪)</td>
+  <td><span class="badge badge-book">הכרטיסים נפתחים 15 יום מראש – ליום זה (24/8) החלון נפתח כבר ב-9/8, כלומר פתוח כרגע. להזמין בהקדם</span></td>
+  <td>יום שלם: הקטע שבתוכנית כרגע – משוחזר היטב, עם מגלשה למטה מההר (אטרקציה בפני עצמה); הכי פופולרי ולכן גם הכי מתויר, כ-1.5 שעות מבייג'ינג. שימו לב: הכרטיס הזה הוא רק כניסה לחומה עצמה (¥45) – הרכבל למעלה (¥100 כיוון אחד / ¥140 הלוך-חזור) והמגלשה למטה (¥100, רק לרדת) הם תוספות בתשלום נפרד. עם כרטיס רכבל הלוך-חזור אפשר לבחור לרדת במגלשה במקום, בלי לשלם עליה בנפרד</td>
+</tr>
+<tr>
+  <td>בייג'ינג (Beijing)</td>
+  <td><span class="badge badge-nice">NICE</span> החומה הסינית (Great Wall, 长城) – אלטרנטיבה: Huanghuacheng (חואנגחואצ'נג, 黄花城)</td>
+  <td><span class="badge badge-book">לא חלון קשיח כמו מוטיאנג'ו – מספיק להזמין באותו יום, כמה שעות לפני ההגעה</span></td>
+  <td>קטע יפה שהחומה מקיפה בו נהר/מאגר מים, הרבה פחות מתויר מ-Mutianyu; מרחק דומה מבייג'ינג (כ-1.5 שעות) אבל בלי מגלשה – בוחרים אחד מהשניים, לא את שניהם. הזמנה אונליין (אתר רשמי/WeChat, בלי גרסה אנגלית – סוכנות צד-שלישי יכולה לעזור עם השפה) או במקום; ביטול חינם עד 24 שעות לפני. הרבה יותר קל ופחות דחוק מהזמנת מוטיאנג'ו</td>
+</tr>
+<tr>
+  <td>בייג'ינג (Beijing)</td>
+  <td><span class="badge badge-must">MUST</span> כיכר טיין-אן-מן (Tiananmen Square, 天安门广场)</td>
+  <td><span class="badge badge-book">חלון של כ-1-9 ימים מראש (סלוטים חדשים כל יום), רישום בשם מלא + דרכון דרך מיני-אפליקציית WeChat (天安门广场预约参观). מומלץ להזמין תוך כמה ימים מעכשיו, לא לדחות לרגע האחרון בעונת השיא</span></td>
+  <td>ממש בהמשך הדרך ממקדש השמיים. חובה להזמין מקום מראש (חינם, דרך מיני-אפליקציה ב-WeChat או האתר) לחלון זמן שמתאים לתזמון הזה – אי אפשר להיכנס ספונטנית בלי הרשמה</td>
+</tr>
+<tr>
+  <td>בייג'ינג (Beijing)</td>
+  <td><span class="badge badge-must">MUST</span> העיר האסורה (Forbidden City, 故宫 – רשמית 'מוזיאון הארמון'/The Palace Museum, 故宫博物院): הזמנת כרטיסים מראש</td>
+  <td><span class="badge badge-book">בדיוק 7 ימים לפני, בשעה 20:00 בזמן בייג'ינג (15:00 בישראל, בקיץ)</span></td>
+  <td>הועבר מ-25/8 ל-27/8 אחרי שהכרטיסים ל-25/8 התמלאו לפני שהספקנו להזמין. מדיניות מחמירה: הכרטיסים נפתחים למכירה בדיוק 7 ימים מראש (20:00 בייג'ינג) ונמכרים אונליין בלבד, רק באתר הרשמי של מוזיאון הארמון – dpm.org.cn (גרסה אנגלית: bookingticket.dpm.org.cn), הרשמה עם אימייל + מספר דרכון. אין קופה במקום, אין כרטיסים לאותו יום, ואין ערוץ מכירה חוקי אחר – כל מקום אחר שמוכר כרטיסים חשוד בהונאה. בעונת הקיץ (אוגוסט) הכרטיסים נחטפים בתוך דקות מהפתיחה – להתחבר בדיוק בשעת הפתיחה. בהזמנה בוחרים חלון בוקר (8:30-12:00) או אחר הצהריים (11:00-17:00); ליום זה (27/8/2026) צריך להזמין ב-20/8/2026, בשעה 20:00 בייג'ינג = 15:00 בישראל (שעון קיץ, בתוקף עד 25/10/2026)</td>
+</tr>
+<tr>
+  <td>בייג'ינג (Beijing)</td>
+  <td><span class="badge badge-nice">NICE</span> אופרת פקין (Peking Opera, 京剧) בתיאטרון ליואן (Liyuan Theatre, 梨园剧场)</td>
+  <td><span class="badge badge-book">כמה ימים לפני</span></td>
+  <td>המסורת התיאטרלית הכי מזוהה עם בייג'ינג עצמה, שלא כמו אופרת סצ'ואן/שינוי הפרצופים בצ'נגדו – מופע כ-70 דקות בסטייל בית-תה (שולחנות מרובעים ל-8), עם תה וחטיפים כלולים, אפשר גם לצפות באפור/תלבושות של המבצעים לפני ההתחלה. בתוך מלון Qianmen Jianguo, קרוב לוואנגפוג'ינג/ציאנמן – אלטרנטיבה לערב הקניות בוואנגפוג'ינג, לא תוספת עליו (התה/חטיפים בהצגה מספיקים כארוחת ערב קלה)</td>
+</tr>
+<tr>
+  <td>בייג'ינג (Beijing)</td>
+  <td><span class="badge badge-nice">NICE</span> המוזיאון הלאומי של סין (National Museum of China, 中国国家博物馆)</td>
+  <td><span class="badge badge-book">עד 7 ימים לפני; משתבצים סלוטים חדשים כל יום ב-17:00</span></td>
+  <td>בצדה המזרחי של כיכר טיין-אן-מן – יום 5 כבר עמוס מספיק (מקדש השמיים+טיין-אן-מן+העיר האסורה+ג'ינגשאן+ציאנמן), אז זה לא נכנס בפועל אלא אם משהו אחר מאותו יום יורד. חובה דרכון פיזי שאיתו הוזמן הכרטיס</td>
+</tr>
+<tr>
+  <td>שיאן (Xi'an)</td>
+  <td><span class="badge badge-must">MUST</span> צבא הטרקוטה (Terracotta Army, 兵马俑): הזמנה מראש (עם דרכון)</td>
+  <td><span class="badge badge-book">כ-3-5 ימים לפני</span></td>
+  <td>כרטיס אישי (לא טור קבוצתי) – ¥120, הזמנה אונליין עם פרטי דרכון, הדרכון הפיזי הוא בעצמו הכרטיס בכניסה. אפשר לבטל עד 24 שעות לפני לקבלת החזר מלא</td>
+</tr>
+<tr>
+  <td>שיאן (Xi'an)</td>
+  <td><span class="badge badge-nice">NICE</span> סדנת הכנת נודלס ביאנג ביאנג (Biangbiang Mian, 摆摆面) בבוקר</td>
+  <td><span class="badge badge-book">יום-יומיים לפני</span></td>
+  <td>הבוקר של יום 2 פנוי (רכיבת האופניים על החומה מומלצת לשעות אחר הצהריים) – הזדמנות טובה לסדנת בצק-ונודלס עם מארח מקומי: לשות, למתוח ולהכות את הבצק (מכאן השם 'ביאנג ביאנג', צליל ההכה על השולחן) עד לרצועות רחבות, ואז לאכול את מה שהכנתם. חוויה שלא חוזרת על עצמה בשום עיר אחרת בטיול</td>
+</tr>
+<tr>
+  <td>צ'נגדו (Chengdu)</td>
+  <td><span class="badge badge-must">MUST</span> בסיס הפנדות (Chengdu Panda Base, 成都大熊猫繁育研究基地): הזמנה מראש</td>
+  <td><span class="badge badge-book">כ-3-5 ימים לפני</span></td>
+  <td>חובה להזמין מראש, מומלץ כמה ימים לפני; מומלץ בוקר מוקדם כי הפנדות פעילות יותר אז</td>
+</tr>
+<tr>
+  <td>צ'נגדו (Chengdu)</td>
+  <td><span class="badge badge-must">MUST</span> הבודהה הענק בלשאן (Leshan Giant Buddha, 乐山大佛) – גיחת יום</td>
+  <td><span class="badge badge-book">כ-3-5 ימים לפני</span></td>
+  <td>רכבת מהירה הלוך-חזור ללשאן וכרטיס הפארק – שניהם חובה להזמין מראש, רצוי כמה ימים לפני כדי להבטיח שעת בוקר</td>
+</tr>
+<tr>
+  <td>צ'נגדו (Chengdu)</td>
+  <td><span class="badge badge-nice">NICE</span> טעימת בייג'יו (Baijiu, 白酒) במזקקת שוֵי ג'ינג פאנג (Shui Jing Fang, 水井坊)</td>
+  <td><span class="badge badge-book">יום-יומיים לפני</span></td>
+  <td>המשקה הלאומי של סין – אף פעם לא הוזכר בטיול הזה עד כה. סיור של כשעה (כ-$38) בהריסות המזקקה בת ה-600 שנה (Jiuyanqiao, על נהר ג'ין, לא רחוק מהסמטאות הרחבות/הצרות), הדגמת שיטת ההפקה המסורתית, וטעימה של 5 סוגי בייג'יו טהור. אזהרה: זה חזק (כ-50-60% אלכוהול), טעימות קטנות בלבד</td>
+</tr>
+<tr>
+  <td>צ'נגדו (Chengdu)</td>
+  <td><span class="badge badge-nice">NICE</span> מוזיאון סאנשינגדוי (Sanxingdui Museum, 三星堆博物馆) – גיחת יום</td>
+  <td><span class="badge badge-book">כמה ימים לפני</span></td>
+  <td>אתר ומוזיאון תרבות שו הקדומה (Ancient Shu) בגואנגחאן, כ-40 ק״מ/כ-18 דקות ברכבת מהירה מצ'נגדו (או כשעה נסיעה). מציג מסכות ופיסלי ברונזה מדהימים ומיסתוריים בני 3,000+ שנה, כולל המסכה עם העיניים הבולטות המפורסמת שהפכה לוויראלית ברשת. יום שלם/חצי יום בפני עצמו – לא נכנס ב-3 הלילות הנוכחיים, שווה לשקול אם מוסיפים יום רביעי</td>
+</tr>
+<tr>
+  <td>ג'יוג'איגואו (Jiuzhaigou)</td>
+  <td><span class="badge badge-must">MUST</span> כרטיס כניסה לעמק ואוטובוס פנימי</td>
+  <td><span class="badge badge-book">הכרטיסים נפתחים בדיוק 15 יום מראש. ליום הזה (4/9) החלון נפתח ב-20/8/2026 – להזמין באותו יום שהוא נפתח</span></td>
+  <td>חובה להזמין מראש – מכסה כניסות יומית מוגבלת ל-41,000 מבקרים ביום בעונת השיא (אפריל-נובמבר), קריטי בעונת אוגוסט-ספטמבר; כולל רישום עם דרכון. יום העמק המלא</td>
+</tr>
+<tr>
+  <td>צ'ונגצ'ינג (Chongqing)</td>
+  <td><span class="badge badge-must">MUST</span> רכבל נהר היאנגצה (Yangtze River Cableway, 长江索道)</td>
+  <td><span class="badge badge-book">1-2 ימים לפני</span></td>
+  <td>רכבל אייקוני שחוצה את הנהר העצום – מומלץ לקראת שקיעה כדי לראות את האורות נדלקים. חובה להזמין מראש – לפחות יום-יומיים קודם דרך WeChat/המלון/Trip.com, כי התורים ארוכים</td>
+</tr>
+<tr>
+  <td>צ'ונגצ'ינג (Chongqing)</td>
+  <td><span class="badge badge-nice">NICE</span> מוזיאון שלושת הערוצים (Three Gorges Museum, 重庆中国三峡博物馆)</td>
+  <td><span class="badge badge-book">1-2 ימים לפני</span></td>
+  <td>מתעד את בניית סכר שלושת הערוצים העצום (הנדסה מטורפת בפני עצמה) ואת ההיסטוריה של האזור; חובה להזמין/לשריין מקום מראש (לרוב חינם, אך דורש רישום עם דרכון יום-יומיים לפני)</td>
+</tr>
+<tr>
+  <td>צ'ונגצ'ינג (Chongqing)</td>
+  <td><span class="badge badge-nice">NICE</span> תצפית ראפלס סיטי (Raffles City / The Crystal, 重庆来福士) – Skywalk שקוף</td>
+  <td><span class="badge badge-book">כמה ימים לפני (לא קריטי)</span></td>
+  <td>פרויקט אדריכלי עצום עם גשר זכוכית אופקי בין גורדי שחקים, נוף פנורמי על כל העיר; מומלץ להזמין מראש כרטיסים לתצפית</td>
+</tr>
+<tr>
+  <td>ג'אנגג'יאג'יה (Zhangjiajie)</td>
+  <td><span class="badge badge-must">MUST</span> הרכבל הארוך בעולם לטיאנמן (Tianmen Mountain, 天门山)</td>
+  <td><span class="badge badge-book">כמה שיותר מוקדם (שבועות) – עונת שיא</span></td>
+  <td>עולה להר ממש ממרכז העיר. חובה להזמין מראש – כרטיסים לפי חלונות זמן קשיחים, נחטפים באוגוסט-ספטמבר. עלייה ברכבל פותחת ב-08:00 (מרץ-נובמבר), ירידה נסגרת בסביבות 19:00 – אבל ביום הזה יוצאים הרבה לפני כדי להספיק את הרכבת אחה״צ לפורונג (ראו לוח הזמנים המוצע למעלה)</td>
+</tr>
+<tr>
+  <td>ג'אנגג'יאג'יה (Zhangjiajie)</td>
+  <td><span class="badge badge-must">MUST</span> עיירת פורונג העתיקה (Furong Ancient Town, 芙蓉镇)</td>
+  <td><span class="badge badge-book">בקנייה במקום</span></td>
+  <td>עיירה עתיקה קסומה הבנויה מסביב למפל בן 60 מ׳; מלא מסעדות וחנויות, ובכניסה במה עם הופעות. בערב מדליקים אורות שמאירים את המפל ואת כל האזור. רכבת מהירה מתחנת ג'אנגג'יאג'יה West לפורונגג'ן (Furongzhen) – מומלץ הרכבת של 14:38 (מגיעה 15:03, כ-25 דקות), ומהתחנה מונית לעיר העתיקה (הנהגים במקום לא עובדים עם Didi – מתמקחים איתם על המחיר במקום); כרטיס כניסה לעיר העתיקה נקנה במקום. חזרה בערב: הרכבת האחרונה בפועל מפורונגג'ן היא 21:53 (מגיעה לג'אנגג'יאג'יה West 22:16) – מספיק זמן להישאר עד אחרי שמדליקים את האורות ועדיין לחזור לעיר באותו ערב, בלי צורך ללון בעיירה. לוודא לוחות מדויקים ב-12306/Trip.com קרוב לתאריך</td>
+</tr>
+<tr>
+  <td>ג'אנגג'יאג'יה (Zhangjiajie)</td>
+  <td><span class="badge badge-must">MUST</span> יואנג'יאג'יה (Yuanjiajie, 袁家界) – הרי אווטאר (Avatar peaks) וגשר האבן הטבעי</td>
+  <td><span class="badge badge-book">חלון של עד 30 יום מראש (לא תאריך פתיחה קשיח כמו ג'יוג'איגואו/מוטיאנג'ו) – ליום הזה (10/9) החלון כבר פתוח מ-11/8. לא דחוק כמו הכרטיסים האחרים, אבל שווה להזמין בתוך השבועיים הקרובים לפני עונת השיא</span></td>
+  <td>הפארק העצום נמצא כ-45 דקות נסיעה מהעיר. כאן נמצאות התצפיות המפורסמות של עמודי הקארסט שהיו הבסיס להרי הללויה המרחפים בסרט אווטאר, כולל גשר האבן הטבעי; שבילים שטוחים, קלים להליכה. כרטיס הכניסה לפארק הלאומי תקף ל-4 ימים רצופים – חובה להזמין מראש</td>
+</tr>
+<tr>
+  <td>ג'אנגג'יאג'יה (Zhangjiajie)</td>
+  <td><span class="badge badge-must">MUST</span> הסולם הגבוה בעולם (Sky Ladder, Via Ferrata), הר צ'יסינג (Qixing Mountain, 七星山)</td>
+  <td><span class="badge badge-book">כמה ימים לפני</span></td>
+  <td>שיא גינס לסולם הגבוה בעולם – מסלול Via Ferrata (אחיזות/משטחי דריכה/כבלים מותקנים בקיר הסלע, עם רתמת ביטוח כפולה) שמתפרש על 168 מ׳ בין שני צוקים בגובה כ-1,480 מ׳; טיפוס אמיתי (לא רק תצפית), כ-2.5-3 שעות, נפתח סוף 2024. מיקום נפרד לגמרי מטיאנמן/הפארק הלאומי – בעיירת דאפינג, מחוז יונגדינג, כ-40 דקות נסיעה מתחנת הרכבת. כניסה כללית להר ¥148 (כולל שבילי יער/תצפית קארסט), רכבל הלוך-חזור ¥180, וטיפוס הסולם עצמו ¥580-780 (כולל ציוד/מדריכים). תופס את כל היום – שווה לוודא רמת נוחות עם גובה/רתמות לפני שסוגרים, זה טיפוס אמיתי, לא רק גשר תצפית</td>
+</tr>
+<tr>
+  <td>הונג קונג (Hong Kong)</td>
+  <td><span class="badge badge-must">MUST</span> גיחת יום למקאו (Macau, 澳門) – מעבורת מהירה (TurboJet/Cotai Water Jet), כ-55-70 דקות כל כיוון</td>
+  <td><span class="badge badge-book">יום-יומיים לפני (לא קריטי)</span></td>
+  <td>היוצא מטרמינל המעבורות בהונג קונג (Sheung Wan) או מקאולון, מגיע ל-Outer Harbour / Taipa. אין השפעה על אשרת סין – מקאו הוא SAR נפרד כמו הונג קונג, אז מדובר במעבר בין שני אזורים חופשיים בלי לגעת ביבשת.</td>
+</tr>
+<tr>
+  <td>הונג קונג (Hong Kong)</td>
+  <td><span class="badge badge-must">MUST</span> דיזנילנד הונג קונג (Hong Kong Disneyland, 香港迪士尼樂園)</td>
+  <td><span class="badge badge-book">אפשר עד 90 יום מראש; מומלץ לנעול תאריך ברגע שהוא סגור</span></td>
+  <td>יום חמישי וחדש בהונג קונג, יום שלם בפארק בלי לוותר על יום המקאו. הכרטיסים היום כולם דיגיטליים עם שיבוץ תאריך מראש (לא נמכר בקופה); ניתן להזמין עד 90 יום מראש ולשנות תאריך מאוחר יותר בתוך תוקף הכרטיס. מגיעים ישירות ברכבל/רכבת דיזני מתחנת Sunny Bay</td>
+</tr>
+<tr>
+  <td>האנגג'ואו (Hangzhou)</td>
+  <td><span class="badge badge-nice">NICE</span> גיחת יום לסוג'ואו (Suzhou, 苏州)</td>
+  <td><span class="badge badge-book">לא צוין זמן מדויק</span></td>
+  <td>כ-40-60 דקות רכבת מהירה בכל כיוון; גן המנהל הצנוע והגן המשתהה – שני גנים קלאסיים. עם רק 2 לילות בהאנגג'ואו והיום הפנוי היחיד תפוס כבר ע"י אזור האגם המערבי (למעלה), סוג'ואו כפי הנראה לא נכנסת מכאן בפועל – שווה יותר לעשות אותה כגיחת יום משנגחאי בהמשך הטיול (ראו שם), לא משתיים</td>
+</tr>
+<tr>
+  <td>וואנגשיאן ואלי (Wangxian Valley)</td>
+  <td><span class="badge badge-must">MUST</span> כניסה לעמק וואנגשיאן ואלי (Wangxian Valley, 望仙谷)</td>
+  <td><span class="badge badge-book">לא צוין זמן מדויק</span></td>
+  <td>מכרה נטוש ששוחזר לכפר תלול-מדרגות על צלע קניון – בקתות עץ, גשרי עץ, מפלים ורפטינג. מגיעים ברכבת מהירה מהאנגג'ואו מזרח לתחנת שאנגראו (כ-1:22 שעות) ואז הסעה/שאטל לעמק (כ-1 שעה נוספת)</td>
+</tr>
+<tr>
+  <td>שנגחאי (Shanghai)</td>
+  <td><span class="badge badge-must">MUST</span> מקדש ג'ינג-אן (Jing'an Temple, 静安寺)</td>
+  <td><span class="badge badge-book">לא צוין זמן מדויק</span></td>
+  <td>קצת הליכה/מטרו ממקדש הבודהה הירקן – מקדש בודהיסטי בין גורדי השחקים של מחוז ג'ינג-אן. כרטיס ¥50, פתוח 7:30-17:00, ביקור כ-90 דקות. הכי טוב 8:00-9:00 או 16:00-17:00</td>
+</tr>
+<tr>
+  <td>שנגחאי (Shanghai)</td>
+  <td><span class="badge badge-nice">NICE</span> דיסני שנגחאי (Shanghai Disneyland, 上海迪士尼度假区)</td>
+  <td><span class="badge badge-book">כמה ימים לפני</span></td>
+  <td>פארק הדיסני היחיד ביבשת סין – מטרו קו 11 ישר לתחנת Disney Resort. כרטיס יום: כ-¥429-475 בימי חול, עד ¥719 בסופ״ש/חגים/קיץ. מתחרה עם לגולנד על אותו יום</td>
+</tr>
+<tr>
+  <td>שנגחאי (Shanghai)</td>
+  <td><span class="badge badge-nice">NICE</span> לגולנד שנגחאי (Legoland Shanghai Resort, 乐高乐园度假区)</td>
+  <td><span class="badge badge-book">כמה ימים לפני</span></td>
+  <td>אלטרנטיבה לדיסני – פארק הלגו הגדול ביותר באסיה, במחוז ג'ינשאן. רכבת מהירה לתחנת Jinshan North (כ-18 דקות מהונגצ'יאו) ואז הליכה/הסעה קצרה</td>
+</tr>
+<tr>
+  <td>שנגחאי (Shanghai)</td>
+  <td><span class="badge badge-nice">NICE</span> גיחת יום לסוג'ואו (Suzhou, 苏州)</td>
+  <td><span class="badge badge-book">לא צוין זמן מדויק</span></td>
+  <td>אלטרנטיבה נוספת – אם לא הספיקו את זה מהאנגג'ואו קודם בטיול (ראו שם), זו ההזדמנות האחרונה. כ-25-40 דקות רכבת מהירה משנגחאי; גנים קלאסיים ליום שלם</td>
+</tr>
+<tr>
+  <td>שנגחאי (Shanghai)</td>
+  <td><span class="badge badge-nice">NICE</span> הנדנדה על המחצבה (Cliff Swing) + אזור Wonderland, ליד מלון InterContinental Wonderland</td>
+  <td><span class="badge badge-book">לא צוין זמן מדויק</span></td>
+  <td>אלטרנטיבה מרוחקת יותר (מחוז סונגג'יאנג, כ-40 דק') – נדנדה ענקית מעל תהום מחצבה בעומק כ-100 מ׳. כרטיס כ-¥130/¥65, פתוח 10:00-18:00; לא כלול אוטומטית בלינה במלון</td>
+</tr>
+</table>
+
+<h2>רשתות שחובה לנסות (בכל הטיול)</h2>
+<p>כמו CoCo, Ichiran או Hama Sushi ביפן – אלה לא רק אוכל, אלא חלק מהחוויה של הטיול.</p>
+<table class="food-table chains-table">
+<tr><th>עברית</th><th>English</th><th>中文</th><th>דירוג</th><th>מה מיוחד בה</th></tr>
+<tr>
+  <td>האיידילאו</td>
+  <td><span class="en">Haidilao</span></td>
+  <td><span class="zh">海底捞</span></td>
+  <td><span class="badge badge-must">MUST</span></td>
+  <td>רשת ההוט פוט הכי מפורסמת בסין, לא בגלל האוכל בלבד אלא בגלל השירות המשוגע: טיפולי ידיים/מגפיים חינם בזמן ההמתנה, וריקוד/מופע מתיחת נודלס תיאטרלי לצד השולחן. פתוחה 24 שעות, זמין בכל עיר גדולה בטיול.</td>
+</tr>
+<tr>
+  <td>מיקסו</td>
+  <td><span class="en">Mixue</span></td>
+  <td><span class="zh">蜜雪冰城</span></td>
+  <td><span class="badge badge-must">MUST</span></td>
+  <td>רשת גלידה/תה בועות אדירה וזולה בטירוף (סביב $1), על כל פינה בכל עיר. הקמע האדום-לבן ('מלך השלג') הוא מם ברשתות החברתיות הסיניות.</td>
+</tr>
+<tr>
+  <td>יאנג גואופו מאלטאנג</td>
+  <td><span class="en">Yang Guofu Malatang</span></td>
+  <td><span class="zh">杨国福麻辣烫</span></td>
+  <td><span class="badge badge-nice">NICE</span></td>
+  <td>רשת מרק חריף-מאלס בסטייל 'תבחרו לבד' – בוחרים שיפודים/ירקות/נודלס מקיר שלם של אפשרויות, שוקלים, ומקבלים מרק לפי הבחירה.</td>
+</tr>
+<tr>
+  <td>צ'אג'י (באוואנג צ'אג'י)</td>
+  <td><span class="en">Chagee</span></td>
+  <td><span class="zh">霸王茶姬</span></td>
+  <td><span class="badge badge-nice">NICE</span></td>
+  <td>רשת תה החלב הכי חמה כרגע בסין, אסתטיקה של 'בית תה יונאני'.</td>
+</tr>
+<tr>
+  <td>לאקין קופי</td>
+  <td><span class="en">Luckin Coffee</span></td>
+  <td><span class="zh">瑞幸咖啡</span></td>
+  <td><span class="badge badge-must">MUST</span></td>
+  <td>עברה את סטארבקס בסין לפני כמה שנים ונשארה שם – מעל 33,000 סניפים ברחבי סין, יותר מכל רשת קפה אחרת בעולם. הזמנה רק דרך אפליקציה/מיני-פרוגרם (לרוב אין קופה בדלפק), אבל מחירים אגרסיביים עם קופונים (סביב 9.9-15 יואן). המנה המזוהה: לאטה קוקוס גולמי (生椰拿铁). שימו עין גם על קוטי קופי (库迪咖啡) – מתחרה שהוקמה ע"י המייסדים הקודמים של לאקין, ומנהלת איתה מלחמת מחירים על אותו כוס 9.9 יואן; טעם דומה, לא צריך לנסות את שניהם.</td>
+</tr>
+<tr>
+  <td>טאסטין ("ההמבורגר הסיני")</td>
+  <td><span class="en">Tastien</span></td>
+  <td><span class="zh">塔斯汀</span></td>
+  <td><span class="badge badge-must">MUST</span></td>
+  <td>לא עוד רשת המבורגרים – הלחמנייה עצמה נאפית/מגולגלת ביד בסטייל מאפה סיני מסורתי (כמו רוג'יאמו), עם מילויים כמו ברווז פקין או חזיר ברוטב פו-יו. קונספט פיוז'ן אמיתי וייחודי, לא חיקוי מערבי; מ-2012 קפצה ל-8,000+ סניפים ברוב ערי סין.</td>
+</tr>
+<tr>
+  <td>היי טי</td>
+  <td><span class="en">HeyTea</span></td>
+  <td><span class="zh">喜茶</span></td>
+  <td><span class="badge badge-must">MUST</span></td>
+  <td>הרשת שהמציאה את 'תה הגבינה' (奶盖茶) – קרם גבינה מלוח קלות על תה אמיתי עם פירות טריים, לא רק סירופ. זו החדשנות שהפכה את כל תעשיית התה הסיני החדש (כולל Chagee) לתופעה עולמית; שווה לנסות את המקור.</td>
+</tr>
+<tr>
+  <td>וואלאס</td>
+  <td><span class="en">Wallace</span></td>
+  <td><span class="zh">华莱士</span></td>
+  <td><span class="badge badge-nice">NICE</span></td>
+  <td>לא חוויית טעם מיוחדת, אבל תופעה בפני עצמה: רשת המזון המהיר הגדולה בסין לפי מספר סניפים – כ-20,000, יותר מ-KFC ומקדונלד'ס ביחד בסין – עם המבורגרי עוף בכ-10 יואן. שווה בעיקר בשביל הסקרנות/מחיר, לא בשביל הטעם.</td>
+</tr>
+</table>
+
+<h2>מאכלים כלל-ארציים (לא קשורים לעיר מסוימת)</h2>
+<p>בניגוד לרשימת "מה לאכול" של כל עיר (מנות שמזוהות עם המקום הספציפי) – אלה מאכלים שנמצאים ממש בכל עיר בטיול, ולא היה הגיוני לתלות אותם בעיר אחת.</p>
+<table class="food-table chains-table">
+<tr><th>עברית</th><th>English</th><th>中文</th><th>דירוג</th><th>מה מיוחד בה</th></tr>
+<tr>
+  <td>חלב סויה + יוטיאו (ארוחת בוקר)</td>
+  <td><span class="en">Soy Milk &amp; Youtiao</span></td>
+  <td><span class="zh">豆浆油条</span></td>
+  <td><span class="badge badge-must">MUST</span></td>
+  <td>ארוחת הבוקר הכי בסיסית והכי נפוצה בסין: כוס חלב סויה חמה (豆浆, לרוב עם/בלי סוכר) עם מקלות בצק מטוגנים (יוטיאו, 油条) לטבילה. נמכר בכל פינת רחוב/דוכן בוקר/חנות נוחות בכל עיר בטיול – לא קשור לעיר מסוימת, ולא צריך לחפש רשת ספציפית ('יונגחה דוג'יאנג', 永和豆浆, הוא רק אחד מכמה שמות נפוצים לסטייל הזה).</td>
+</tr>
+<tr>
+  <td>ג'יאוצה (כופתאות)</td>
+  <td><span class="en">Jiaozi (Dumplings)</span></td>
+  <td><span class="zh">饺子</span></td>
+  <td><span class="badge badge-must">MUST</span></td>
+  <td>כופתאות בצק ממולאות (מבושלות/מטוגנות/מאודות) – זמינות בכל עיר בטיול, לא מנה שמזוהה עם עיר מסוימת; מהמאכלים הבסיסיים והפופולריים ביותר בכל סין (המלצת מיכל).</td>
+</tr>
+</table>
+
+<div class="nav">
+  <a href="00-overview.html">↩ סקירה כללית</a>
+  | <a href="00b-calendar.html">לוח שנה יומי</a>
+  
+  
+</div>
+
+</body>
+</html>
