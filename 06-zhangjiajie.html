@@ -29,6 +29,11 @@
   .badge-night { background: #1e293b; color: #e2e8f0; }
   .badge-day { background: #fef9c3; color: #854d0e; }
   .badge-daytag { background: #dbeafe; color: #1e40af; }
+  #route-map { height: 480px; border-radius: 8px; margin-bottom: 8px; }
+  .map-legend { font-size: 13px; color: #444; margin-bottom: 10px; }
+  .map-legend span.dot { display: inline-block; width: 11px; height: 11px; border-radius: 50%; margin-left: 5px; vertical-align: middle; }
+  .route-marker-label { background: transparent !important; border: none !important; box-shadow: none !important; font-weight: bold; color: #fff; font-size: 11px; }
+  .route-marker-label::before { display: none !important; }
   .badge-confirmed { background: #d1fae5; color: #065f46; }
   .zh { font-family: 'Noto Sans CJK SC', 'PingFang SC', 'Heiti SC', sans-serif; direction: ltr; }
   .en { direction: ltr; display: inline-block; }
@@ -95,9 +100,9 @@
   <div class="desc">יום כבד עם המון נסיעות – לוח הזמנים הבא מבוסס על לוחות הרכבות המאומתים בפועל (ספטמבר 2026, ייתכנו שינויים קלים – לוודא ב-12306/Trip.com סמוך למועד): 07:30 הגעה לתחנת הרכבל התחתונה בטיאנמן (ממש ליד תחנת הרכבת) ← 08:00 עלייה ברכבל (כ-28-30 דקות, הרכבל הנוסעים הארוך בעולם) ← 08:30-12:30 סיור בפסגה: שבילי הזכוכית + מערת שער השמיים + 999 המדרגות (כ-4 שעות) ← 12:30-13:00 ירידה ברכבל ← 13:00-13:30 ארוחת צהריים מהירה ליד התחנה ← 14:38 רכבת מהירה מתחנת ג'אנגג'יאג'יה West לפורונגג'ן (Furongzhen, כ-25 דקות) ← 15:03 הגעה, מונית לעיר העתיקה ← 15:20-18:30 סיור ביום: רחוב וולי, ארמון הטוסי, מערת המפל ← כ-18:45 שקיעה (ספטמבר), מדליקים את האורות בסמוך לשקיעה ← 18:45-20:45 העיירה מוארת, ארוחת ערב/שיטוט ← 21:00 חזרה לתחנת פורונגג'ן ← 21:53 רכבת אחרונה בפועל חזרה לג'אנגג'יאג'יה West (כ-23 דקות) ← 22:16 הגעה. שעת השקיעה (~18:45) והלוחות המדויקים הם לפי ספטמבר 2026 – חובה לאמת מול 12306 סמוך לתאריך בפועל</div>
 </div>
 <div class="after-item">
-  <span class="badge badge-must">MUST</span><span class="badge badge-daytag">יום 1</span><span class="badge badge-book">הזמנה: מראש</span>
+  <span class="badge badge-must">MUST</span><span class="badge badge-daytag">יום 1</span><span class="badge badge-book">הזמנה: מראש – חובה</span>
   <span class="title">הרכבל הארוך בעולם לטיאנמן (Tianmen Mountain, 天门山)</span>
-  <div class="desc">עולה להר ממש ממרכז העיר. חובה להזמין מראש – כרטיסים לפי חלונות זמן קשיחים, נחטפים באוגוסט-ספטמבר. עלייה ברכבל פותחת ב-08:00 (מרץ-נובמבר), ירידה נסגרת בסביבות 19:00 – אבל ביום הזה יוצאים הרבה לפני כדי להספיק את הרכבת אחה״צ לפורונג (ראו לוח הזמנים המוצע למעלה)</div>
+  <div class="desc">עולה להר ממש ממרכז העיר. הכרטיס המלא ¥288 לאדם (כולל רכבל ואוטובוסי הפארק) – והוא נמכר ראשון מבין כרטיסי האזור. הזמנה דרך מיני-אפליקציית הוויצ'אט 张家界一机游 או ערוץ ההזמנות הרשמי של טיאנמן (גם Trip.com/Klook מוכרים אותו עם דרכון, בתוספת קטנה). בהזמנה בוחרים גם קו עלייה – A (רכבל מהעיר) או B (אוטובוס להר) – וגם חלון כניסה של 30 דקות, ואי אפשר להיכנס בקו/בשעה אחרים. עלייה ברכבל פותחת ב-08:00 (מרץ-נובמבר), ירידה נסגרת בסביבות 19:00 – אבל ביום הזה יוצאים הרבה לפני כדי להספיק את הרכבת אחה״צ לפורונג (ראו לוח הזמנים המוצע למעלה)</div>
 </div>
 <div class="after-item">
   <span class="badge badge-must">MUST</span><span class="badge badge-daytag">יום 1</span>
@@ -165,9 +170,9 @@
   <div class="desc">מתחם ענק בהשראת אדריכלות הטוג'יה – מבנה עמודים מרכזי בגובה כ-110 מ׳, המוכר בגינס כגבוה מסוגו בעולם, עם פתח מרכזי שמזכיר בצורתו את שער השמיים בהר טיאנמן. בפנים חנויות, מלאכת יד ומסעדות; חובה לשלם כניסה (כרטיסים נמכרים במקום, מבנה הקופות בצד שמאל מהכניסה). מומלץ להגיע בערב ולהישאר עד הסגירה – הבניין מואר ומרשים בלילה, ולקראת הסגירה מדליקים מדורה עם רקדנים והופעות, אווירה מעולה</div>
 </div>
 <div class="day-heading">יום 5</div><div class="after-item">
-  <span class="badge badge-nice">NICE</span><span class="badge badge-daytag">יום 5</span>
+  <span class="badge badge-nice">NICE</span><span class="badge badge-daytag">יום 5</span><span class="badge badge-book">הזמנה: מראש – חובה</span>
   <span class="title">הגשר הזכוכית של ג'אנגג'יאג'יה (Zhangjiajie Grand Canyon Glass Bridge, 张家界大峡谷玻璃桥) (קניון גרנד)</span>
-  <div class="desc">אטרקציה נפרדת באזור אחר – חצי יום, מתאים כסגירה לפני היציאה. יום 5 גם יום היציאה מהעיר – אחרי הגשר לוקחים מזוודות ונוסעים לתחנת הרכבת/שדה התעופה להמשך המסלול</div>
+  <div class="desc">אטרקציה נפרדת באזור אחר – חצי יום, מתאים כסגירה לפני היציאה. יום 5 גם יום היציאה מהעיר – אחרי הגשר לוקחים מזוודות ונוסעים לתחנת הרכבת/שדה התעופה להמשך המסלול. אין מכירה בקופה בפועל – הכל אונליין ובשם מלא, דרך החשבון הרשמי בוויצ'אט 张家界大峡谷旅游开发有限公司 (תפריט: 门票预约), מגבלת 27,000 מבקרים ביום. שתי אפשרויות: קו C – כרטיס לגשר בלבד, כ-¥168; קו B – קניון + גשר, כ-¥262</div>
 </div>
 <div class="after-item">
   <span class="badge badge-nice">NICE</span>

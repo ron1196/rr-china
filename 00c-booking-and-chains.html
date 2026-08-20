@@ -29,6 +29,11 @@
   .badge-night { background: #1e293b; color: #e2e8f0; }
   .badge-day { background: #fef9c3; color: #854d0e; }
   .badge-daytag { background: #dbeafe; color: #1e40af; }
+  #route-map { height: 480px; border-radius: 8px; margin-bottom: 8px; }
+  .map-legend { font-size: 13px; color: #444; margin-bottom: 10px; }
+  .map-legend span.dot { display: inline-block; width: 11px; height: 11px; border-radius: 50%; margin-left: 5px; vertical-align: middle; }
+  .route-marker-label { background: transparent !important; border: none !important; box-shadow: none !important; font-weight: bold; color: #fff; font-size: 11px; }
+  .route-marker-label::before { display: none !important; }
   .badge-confirmed { background: #d1fae5; color: #065f46; }
   .zh { font-family: 'Noto Sans CJK SC', 'PingFang SC', 'Heiti SC', sans-serif; direction: ltr; }
   .en { direction: ltr; display: inline-block; }
@@ -189,8 +194,8 @@
 <tr>
   <td>ג'אנגג'יאג'יה (Zhangjiajie)</td>
   <td><span class="badge badge-must">MUST</span> הרכבל הארוך בעולם לטיאנמן (Tianmen Mountain, 天门山)</td>
-  <td><span class="badge badge-book">כמה שיותר מוקדם (שבועות) – עונת שיא</span></td>
-  <td>עולה להר ממש ממרכז העיר. חובה להזמין מראש – כרטיסים לפי חלונות זמן קשיחים, נחטפים באוגוסט-ספטמבר. עלייה ברכבל פותחת ב-08:00 (מרץ-נובמבר), ירידה נסגרת בסביבות 19:00 – אבל ביום הזה יוצאים הרבה לפני כדי להספיק את הרכבת אחה״צ לפורונג (ראו לוח הזמנים המוצע למעלה)</td>
+  <td><span class="badge badge-book">חלון מתגלגל קצר: הכרטיסים לכל יום נפתחים ב-08:00 שעון בייג'ינג, ובפועל 3-7 ימים מראש בלבד. ליום הזה (9/9) להזמין ב-6/9 בבוקר, ולא לסמוך על השארית – זה הכרטיס הכי דחוק מבין השלושה בג'אנגג'יאג'יה</span></td>
+  <td>עולה להר ממש ממרכז העיר. הכרטיס המלא ¥288 לאדם (כולל רכבל ואוטובוסי הפארק) – והוא נמכר ראשון מבין כרטיסי האזור. הזמנה דרך מיני-אפליקציית הוויצ'אט 张家界一机游 או ערוץ ההזמנות הרשמי של טיאנמן (גם Trip.com/Klook מוכרים אותו עם דרכון, בתוספת קטנה). בהזמנה בוחרים גם קו עלייה – A (רכבל מהעיר) או B (אוטובוס להר) – וגם חלון כניסה של 30 דקות, ואי אפשר להיכנס בקו/בשעה אחרים. עלייה ברכבל פותחת ב-08:00 (מרץ-נובמבר), ירידה נסגרת בסביבות 19:00 – אבל ביום הזה יוצאים הרבה לפני כדי להספיק את הרכבת אחה״צ לפורונג (ראו לוח הזמנים המוצע למעלה)</td>
 </tr>
 <tr>
   <td>ג'אנגג'יאג'יה (Zhangjiajie)</td>
@@ -209,6 +214,12 @@
   <td><span class="badge badge-must">MUST</span> הסולם הגבוה בעולם (Sky Ladder, Via Ferrata), הר צ'יסינג (Qixing Mountain, 七星山)</td>
   <td><span class="badge badge-book">כמה ימים לפני</span></td>
   <td>שיא גינס לסולם הגבוה בעולם – מסלול Via Ferrata (אחיזות/משטחי דריכה/כבלים מותקנים בקיר הסלע, עם רתמת ביטוח כפולה) שמתפרש על 168 מ׳ בין שני צוקים בגובה כ-1,480 מ׳; טיפוס אמיתי (לא רק תצפית), כ-2.5-3 שעות, נפתח סוף 2024. מיקום נפרד לגמרי מטיאנמן/הפארק הלאומי – בעיירת דאפינג, מחוז יונגדינג, כ-40 דקות נסיעה מתחנת הרכבת. כניסה כללית להר ¥148 (כולל שבילי יער/תצפית קארסט), רכבל הלוך-חזור ¥180, וטיפוס הסולם עצמו ¥580-780 (כולל ציוד/מדריכים). תופס את כל היום – שווה לוודא רמת נוחות עם גובה/רתמות לפני שסוגרים, זה טיפוס אמיתי, לא רק גשר תצפית</td>
+</tr>
+<tr>
+  <td>ג'אנגג'יאג'יה (Zhangjiajie)</td>
+  <td><span class="badge badge-nice">NICE</span> הגשר הזכוכית של ג'אנגג'יאג'יה (Zhangjiajie Grand Canyon Glass Bridge, 张家界大峡谷玻璃桥) (קניון גרנד)</td>
+  <td><span class="badge badge-book">3-4 ימים מראש ביום רגיל, עד שבוע בעונת שיא. ליום הזה (13/9) להזמין סביב 8-10/9</span></td>
+  <td>אטרקציה נפרדת באזור אחר – חצי יום, מתאים כסגירה לפני היציאה. יום 5 גם יום היציאה מהעיר – אחרי הגשר לוקחים מזוודות ונוסעים לתחנת הרכבת/שדה התעופה להמשך המסלול. אין מכירה בקופה בפועל – הכל אונליין ובשם מלא, דרך החשבון הרשמי בוויצ'אט 张家界大峡谷旅游开发有限公司 (תפריט: 门票预约), מגבלת 27,000 מבקרים ביום. שתי אפשרויות: קו C – כרטיס לגשר בלבד, כ-¥168; קו B – קניון + גשר, כ-¥262</td>
 </tr>
 <tr>
   <td>הונג קונג (Hong Kong)</td>
