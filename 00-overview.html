@@ -30,8 +30,6 @@
   .badge-day { background: #fef9c3; color: #854d0e; }
   .badge-daytag { background: #dbeafe; color: #1e40af; }
   #route-map { height: 480px; border-radius: 8px; margin-bottom: 8px; }
-  .map-legend { font-size: 13px; color: #444; margin-bottom: 10px; }
-  .map-legend span.dot { display: inline-block; width: 11px; height: 11px; border-radius: 50%; margin-left: 5px; vertical-align: middle; }
   .route-city-label { background: rgba(255,255,255,0.92) !important; border: none !important; box-shadow: 0 1px 3px rgba(0,0,0,0.25) !important; font-weight: bold; font-size: 12px; padding: 2px 6px; direction: rtl; }
   .route-city-label::before { display: none !important; }
   .badge-confirmed { background: #d1fae5; color: #065f46; }
@@ -91,7 +89,6 @@
 </div>
 
 <h2>מפת המסלול</h2>
-<div class="map-legend"><span class="dot" style="background:#dc2626;"></span>1. Beijing&nbsp;&nbsp;<span class="dot" style="background:#ea580c;"></span>2. Xi'an&nbsp;&nbsp;<span class="dot" style="background:#d97706;"></span>3. Chengdu&nbsp;&nbsp;<span class="dot" style="background:#65a30d;"></span>4. Jiuzhaigou&nbsp;&nbsp;<span class="dot" style="background:#059669;"></span>5. Chongqing&nbsp;&nbsp;<span class="dot" style="background:#0891b2;"></span>6. Zhangjiajie&nbsp;&nbsp;<span class="dot" style="background:#2563eb;"></span>7. Yangshuo&nbsp;&nbsp;<span class="dot" style="background:#4f46e5;"></span>8. Shenzhen&nbsp;&nbsp;<span class="dot" style="background:#7c3aed;"></span>9. Hong Kong&nbsp;&nbsp;<span class="dot" style="background:#c026d3;"></span>10. Hangzhou&nbsp;&nbsp;<span class="dot" style="background:#db2777;"></span>11. Wangxian Valley&nbsp;&nbsp;<span class="dot" style="background:#78716c;"></span>12. Shanghai</div>
 <div id="route-map"></div>
 <p class="food-note">הקואורדינטות הן ברמת דיוק של עיר/אזור (לתכנון, לא לניווט) – המספרים על המפה הם סדר הביקור במסלול.</p>
 
@@ -171,11 +168,11 @@
 </tr>
 <tr>
   <td><a href="08-shenzhen.html">שנזן (Shenzhen)</a></td>
-  <td>2</td>
+  <td>1</td>
   <td>גוילין (Guilin)</td>
   <td>רכבת מהירה ישירה גוילין ← שנזן</td>
   <td>כ-3-3.5 שעות</td>
-  <td><ul class="toc-main"><li>הוואצ'יאנגביי – שוק האלקטרוניקה/גאדג'טים הכי מפורסם בעולם, יום שלם של חיפוש ומיקוח</li></ul></td>
+  <td><ul class="toc-main"><li>הוואצ'יאנגביי – שוק האלקטרוניקה/גאדג'טים הכי מפורסם בעולם, אחר הצהריים</li><li>Window of the World בערב</li></ul></td>
 </tr>
 <tr>
   <td><a href="09-hongkong.html">הונג קונג (Hong Kong)</a></td>
@@ -203,7 +200,7 @@
 </tr>
 <tr>
   <td><a href="11-shanghai.html">שנגחאי (Shanghai)</a></td>
-  <td>4</td>
+  <td>5</td>
   <td>וואנגשיאן ואלי (Wangxian Valley)</td>
   <td>רכבת מהירה ישירה שאנגראו ← שנגחאי (אין צורך לחזור להאנגג'ואו)</td>
   <td>כ-2:14 שעות</td>
@@ -222,7 +219,7 @@
 <li>מקאו כגיחת יום מהונג קונג: מעבורת מהירה (~55-70 דקות) בתדירות גבוהה לאורך היום. מקאו הוא SAR נפרד בדיוק כמו הונג קונג ופטור מאשרה לישראלים (עד 90 יום) – כלומר המעבר הונג קונג↔מקאו↔הונג קונג לא נוגע ביבשת סין בכלל ולא צורך כניסה/יציאה נוספת על אשרת הסין (בניגוד למעבר שנזן↔הונג קונג). חשוב לחזור להונג קונג באותו יום/לפני הבוקר של ה-11:37 כדי לא לפספס את רכבת ה-G100.</li>
 <li>סוג'ואו כגיחת יום: קרובה מאוד גם להאנגג'ואו וגם לשנגחאי (כ-40-60 דקות רכבת מהירה מכל אחת מהן) – אפשר לשלב אותה כיום שלם באמצע השהות בהאנגג'ואו או בשנגחאי, בלי לעבור מלון.</li>
 <li>האנגג'ואו ← וואנגשיאן ואלי ← שנגחאי: במקום לחזור להאנגג'ואו אחרי גיחת יום לוואנגשיאן ואלי, יוצאים מהאנגג'ואו מזרח לתחנת שאנגראו (כ-1:22 שעות), הסעה/שאטל לעמק עצמו (כ-1 שעה) ולינה שם בבקתת צוק אמיתית – ולמחרת רכבת מהירה ישירה משאנגראו לשנגחאי (כ-2:14 שעות, כ-76 רכבות ביום, משעה 00:07 עד 23:49), בלי לחזור על העקבות. כך רואים את העמק גם מואר בלילה וגם בבוקר, ולא רק גיחת יום דחוסה.</li>
-<li>חג האמצע-הסתיו (Mid-Autumn Festival) חל ב-25/9/2026 – בדיוק ליל ההגעה להאנגג'ואו. זו ההזדמנות לצפיית הירח הכי מפורסמת בסין (שלוש הבריכות המשתקפות בירח, על האגם המערבי) – ראו פירוט בעמוד האנגג'ואו.</li>
+<li>חג האמצע-הסתיו (Mid-Autumn Festival) חל ב-25/9/2026 – יום 2 המלא בהאנגג'ואו (מגיעים ב-24/9 בערב, יום לפני, בכוונה, כדי שלא צריך לרדת מרכבת של 6:50 שעות ולרוץ ישר לשיט הירח). זו ההזדמנות לצפיית הירח הכי מפורסמת בסין (שלוש הבריכות המשתקפות בירח, על האגם המערבי) – ראו פירוט בעמוד האנגג'ואו.</li>
 <li>שבוע הזהב הסיני (National Day Golden Week, חג המדינה) חל 1-7/10/2026 – והיום האחרון בשנגחאי (1/10, לפני הטיסה ב-00:20) נופל ממש ביום הראשון והעמוס ביותר של השבוע הזה. תקופת הנסיעות הפנים-סינית העמוסה בשנה: תורים של 3-4 שעות בפארקי שעשועים, מוזיאונים מלאים, ומחירי מלונות/כרטיסים שמזנקים. כל מה שלא הוזמן מראש ליום הזה כדאי לתכנן בזהירות כפולה, ולהעדיף אתרים פחות פופולריים/פתוחים יותר על פני האטרקציות הכי מבוקשות.</li>
 <li>עיסוי כפות רגליים (足疗, foot massage) – שונה מחוויות הספא/מעיינות החמים שכבר מפוזרות בכל עיר בטיול: זה מקומון קטן על כל פינה, זול (כ-¥60-120 לשעה), פתוח עד מאוחר, ומצוין אחרי יום הליכה ארוך. לא צריך לתכנן מראש – פשוט נכנסים לאחד כשנתקלים בו בערב.</li>
 </ul>
@@ -230,7 +227,7 @@
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
-  const routePoints = [{"name":"בייג'ינג (Beijing)","lat":39.9042,"lng":116.4074,"nights":"6","order":1,"color":"#dc2626"},{"name":"שיאן (Xi'an)","lat":34.3416,"lng":108.9398,"nights":"2","order":2,"color":"#ea580c"},{"name":"צ'נגדו (Chengdu)","lat":30.5728,"lng":104.0668,"nights":"3","order":3,"color":"#d97706"},{"name":"ג'יוג'איגואו (Jiuzhaigou)","lat":33.2452,"lng":103.9183,"nights":"3","order":4,"color":"#65a30d"},{"name":"צ'ונגצ'ינג (Chongqing)","lat":29.563,"lng":106.5516,"nights":"3","order":5,"color":"#059669"},{"name":"ג'אנגג'יאג'יה (Zhangjiajie)","lat":29.1173,"lng":110.4794,"nights":"5","order":6,"color":"#0891b2"},{"name":"יאנגשואו (Yangshuo)","lat":24.777,"lng":110.49,"nights":"4","order":7,"color":"#2563eb"},{"name":"שנזן (Shenzhen)","lat":22.5431,"lng":114.0579,"nights":"2","order":8,"color":"#4f46e5"},{"name":"הונג קונג (Hong Kong)","lat":22.3193,"lng":114.1694,"nights":"5","order":9,"color":"#7c3aed"},{"name":"האנגג'ואו (Hangzhou)","lat":30.2741,"lng":120.1551,"nights":"2","order":10,"color":"#c026d3"},{"name":"וואנגשיאן ואלי (Wangxian Valley)","lat":28.35,"lng":118.05,"nights":"1","order":11,"color":"#db2777"},{"name":"שנגחאי (Shanghai)","lat":31.2304,"lng":121.4737,"nights":"4","order":12,"color":"#78716c"}];
+  const routePoints = [{"name":"בייג'ינג (Beijing)","lat":39.9042,"lng":116.4074,"nights":"6","order":1,"color":"#dc2626"},{"name":"שיאן (Xi'an)","lat":34.3416,"lng":108.9398,"nights":"2","order":2,"color":"#ea580c"},{"name":"צ'נגדו (Chengdu)","lat":30.5728,"lng":104.0668,"nights":"3","order":3,"color":"#d97706"},{"name":"ג'יוג'איגואו (Jiuzhaigou)","lat":33.2452,"lng":103.9183,"nights":"3","order":4,"color":"#65a30d"},{"name":"צ'ונגצ'ינג (Chongqing)","lat":29.563,"lng":106.5516,"nights":"3","order":5,"color":"#059669"},{"name":"ג'אנגג'יאג'יה (Zhangjiajie)","lat":29.1173,"lng":110.4794,"nights":"5","order":6,"color":"#0891b2"},{"name":"יאנגשואו (Yangshuo)","lat":24.777,"lng":110.49,"nights":"4","order":7,"color":"#2563eb"},{"name":"שנזן (Shenzhen)","lat":22.5431,"lng":114.0579,"nights":"1","order":8,"color":"#4f46e5"},{"name":"הונג קונג (Hong Kong)","lat":22.3193,"lng":114.1694,"nights":"5","order":9,"color":"#7c3aed"},{"name":"האנגג'ואו (Hangzhou)","lat":30.2741,"lng":120.1551,"nights":"2","order":10,"color":"#c026d3"},{"name":"וואנגשיאן ואלי (Wangxian Valley)","lat":28.35,"lng":118.05,"nights":"1","order":11,"color":"#db2777"},{"name":"שנגחאי (Shanghai)","lat":31.2304,"lng":121.4737,"nights":"5","order":12,"color":"#78716c"}];
   const routeMap = L.map('route-map').setView([30.5, 112], 4.4);
   // Same OSM-based tiles as the Pokémon page, but CARTO's Voyager style renders place labels
   // in Latin/English script instead of Chinese (unlike the plain OSM Mapnik tiles).
