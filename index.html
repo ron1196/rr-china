@@ -32,8 +32,8 @@
   #route-map { height: 480px; border-radius: 8px; margin-bottom: 8px; }
   .map-legend { font-size: 13px; color: #444; margin-bottom: 10px; }
   .map-legend span.dot { display: inline-block; width: 11px; height: 11px; border-radius: 50%; margin-left: 5px; vertical-align: middle; }
-  .route-marker-label { background: transparent !important; border: none !important; box-shadow: none !important; font-weight: bold; color: #fff; font-size: 11px; }
-  .route-marker-label::before { display: none !important; }
+  .route-city-label { background: rgba(255,255,255,0.92) !important; border: none !important; box-shadow: 0 1px 3px rgba(0,0,0,0.25) !important; font-weight: bold; font-size: 12px; padding: 2px 6px; direction: rtl; }
+  .route-city-label::before { display: none !important; }
   .badge-confirmed { background: #d1fae5; color: #065f46; }
   .zh { font-family: 'Noto Sans CJK SC', 'PingFang SC', 'Heiti SC', sans-serif; direction: ltr; }
   .en { direction: ltr; display: inline-block; }
@@ -232,9 +232,12 @@
 <script>
   const routePoints = [{"name":"בייג'ינג (Beijing)","lat":39.9042,"lng":116.4074,"nights":"6","order":1,"color":"#dc2626"},{"name":"שיאן (Xi'an)","lat":34.3416,"lng":108.9398,"nights":"2","order":2,"color":"#ea580c"},{"name":"צ'נגדו (Chengdu)","lat":30.5728,"lng":104.0668,"nights":"3","order":3,"color":"#d97706"},{"name":"ג'יוג'איגואו (Jiuzhaigou)","lat":33.2452,"lng":103.9183,"nights":"3","order":4,"color":"#65a30d"},{"name":"צ'ונגצ'ינג (Chongqing)","lat":29.563,"lng":106.5516,"nights":"3","order":5,"color":"#059669"},{"name":"ג'אנגג'יאג'יה (Zhangjiajie)","lat":29.1173,"lng":110.4794,"nights":"5","order":6,"color":"#0891b2"},{"name":"יאנגשואו (Yangshuo)","lat":24.777,"lng":110.49,"nights":"4","order":7,"color":"#2563eb"},{"name":"שנזן (Shenzhen)","lat":22.5431,"lng":114.0579,"nights":"2","order":8,"color":"#4f46e5"},{"name":"הונג קונג (Hong Kong)","lat":22.3193,"lng":114.1694,"nights":"5","order":9,"color":"#7c3aed"},{"name":"האנגג'ואו (Hangzhou)","lat":30.2741,"lng":120.1551,"nights":"2","order":10,"color":"#c026d3"},{"name":"וואנגשיאן ואלי (Wangxian Valley)","lat":28.35,"lng":118.05,"nights":"1","order":11,"color":"#db2777"},{"name":"שנגחאי (Shanghai)","lat":31.2304,"lng":121.4737,"nights":"4","order":12,"color":"#78716c"}];
   const routeMap = L.map('route-map').setView([30.5, 112], 4.4);
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; OpenStreetMap contributors',
+  // Same OSM-based tiles as the Pokémon page, but CARTO's Voyager style renders place labels
+  // in Latin/English script instead of Chinese (unlike the plain OSM Mapnik tiles).
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+    attribution: '&copy; OpenStreetMap contributors &copy; CARTO',
     maxZoom: 18,
+    subdomains: 'abcd',
   }).addTo(routeMap);
   L.polyline(routePoints.map((p) => [p.lat, p.lng]), { color: '#64748b', weight: 2, dashArray: '6,6' }).addTo(routeMap);
   routePoints.forEach((p) => {
@@ -245,7 +248,7 @@
       fillOpacity: 0.9,
       weight: 2,
     }).addTo(routeMap);
-    marker.bindTooltip(String(p.order), { permanent: true, direction: 'center', className: 'route-marker-label' });
+    marker.bindTooltip(p.order + '. ' + p.name, { permanent: true, direction: 'right', offset: [10, 0], className: 'route-city-label' });
     marker.bindPopup('<b>' + p.order + '. ' + p.name + '</b><br>' + p.nights + ' לילות');
   });
 </script>
