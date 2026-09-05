@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>ג'יוג'איגואו – יום העמק: תכנון מול בפועל</title>
+<style>
+  body { font-family: 'Segoe UI', Arial, 'Noto Sans Hebrew', sans-serif; direction: rtl; text-align: right; max-width: 900px; margin: 40px auto; padding: 0 20px; color: #1a1a1a; line-height: 1.6; }
+  h1 { font-size: 26px; border-bottom: 3px solid #2b6cb0; padding-bottom: 10px; }
+  h2 { color: #2b6cb0; font-size: 19px; margin-top: 32px; border-bottom: 1px solid #cbd5e0; padding-bottom: 6px; }
+  h3 { font-size: 18px; color: #1a365d; margin-top: 28px; }
+  .intro { font-style: italic; color: #444; }
+  table { width: 100%; border-collapse: collapse; margin: 16px 0; direction: rtl; }
+  th, td { border: 1px solid #cbd5e0; padding: 8px 10px; text-align: right; font-size: 14px; vertical-align: top; }
+  th { background: #e2e8f0; font-weight: bold; }
+  ul { margin: 6px 0 18px 0; padding-right: 22px; }
+  li { margin-bottom: 4px; }
+  .label { font-weight: bold; margin-top: 14px; display: block; }
+  .note li { margin-bottom: 8px; }
+  .train-table tr.tr-chosen { background: #f0fff4; font-weight: bold; }
+  .train-table tr.tr-slow { color: #888; }
+  .train-table td, .train-table th { font-size: 13px; }
+  .rec-box { background: #ebf4ff; border: 1px solid #90b4e8; border-right: 4px solid #2b6cb0; border-radius: 4px; padding: 10px 12px; margin: 10px 0; font-size: 14px; }
+  .pack-box { background: #fffbea; border: 1px solid #e6c86e; border-right: 4px solid #b7791f; border-radius: 4px; padding: 10px 12px; margin: 10px 0; font-size: 14px; }
+  .opt-chosen { border-right: 4px solid #2f855a; background: #f0fff4; }
+  .opt-rejected { border-right: 4px solid #cbd5e0; background: #fafafa; opacity: 0.9; }
+  .toc-main { list-style: "– "; font-size: 13px; color: #555; margin: 2px 0 10px 0; padding-right: 26px; }
+  .toc-main li { margin-bottom: 2px; }
+  .food-note { font-size: 13px; color: #555; margin: 4px 0 12px 0; }
+  table.food-table th, table.food-table td { font-size: 13px; }
+  .badge { display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: 12px; font-weight: bold; margin-left: 4px; }
+  .badge-must { background: #fde2e2; color: #9b2c2c; }
+  .badge-nice { background: #e6f4ea; color: #276749; }
+  .badge-book { background: #ede9fe; color: #5b21b6; }
+  .badge-spa { background: #e0e7ff; color: #363594; }
+  .badge-tech { background: #fef3c7; color: #92400e; }
+  .badge-night { background: #1e293b; color: #e2e8f0; }
+  .badge-day { background: #fef9c3; color: #854d0e; }
+  .badge-daytag { background: #dbeafe; color: #1e40af; }
+  #route-map { height: 480px; border-radius: 8px; margin-bottom: 8px; }
+  .route-city-label { background: rgba(255,255,255,0.92) !important; border: none !important; box-shadow: 0 1px 3px rgba(0,0,0,0.25) !important; font-weight: bold; font-size: 12px; padding: 2px 6px; direction: rtl; }
+  .route-city-label::before { display: none !important; }
+  .badge-confirmed { background: #d1fae5; color: #065f46; }
+  .zh { font-family: 'Noto Sans CJK SC', 'PingFang SC', 'Heiti SC', sans-serif; direction: ltr; }
+  .en { direction: ltr; display: inline-block; }
+  .main-box { background: #ebf4ff; border-right: 4px solid #2b6cb0; padding: 10px 14px; margin: 10px 0 16px 0; }
+  .main-box .main-label { font-size: 12px; color: #2b6cb0; font-weight: bold; margin-bottom: 4px; }
+  .main-box div.item { font-weight: bold; margin-bottom: 2px; }
+  .after-item { margin-bottom: 10px; }
+  .after-item .title { font-weight: bold; }
+  .after-item .desc { font-size: 13px; color: #555; margin-top: 2px; }
+  .day-heading { font-weight: bold; color: #1a365d; font-size: 15px; margin: 16px 0 6px 0; border-bottom: 1px dashed #cbd5e0; padding-bottom: 3px; }
+  .extra-options-heading { color: #92400e; border-bottom: 2px solid #92400e; margin-top: 28px; font-size: 14px; }
+  table.food-table { table-layout: fixed; }
+  table.food-table th:nth-child(1), table.food-table td:nth-child(1) { width: 13%; }
+  table.food-table th:nth-child(2), table.food-table td:nth-child(2) { width: 15%; }
+  table.food-table th:nth-child(3), table.food-table td:nth-child(3) { width: 9%; }
+  table.food-table th:nth-child(4), table.food-table td:nth-child(4) { width: 7%; }
+  table.food-table th:nth-child(5), table.food-table td:nth-child(5) { width: 30%; }
+  table.food-table th:nth-child(6), table.food-table td:nth-child(6) { width: 26%; }
+  .venue { color: #1a5490; font-size: 12.5px; }
+  table.chains-table { table-layout: fixed; }
+  table.chains-table th:nth-child(1), table.chains-table td:nth-child(1) { width: 14%; }
+  table.chains-table th:nth-child(2), table.chains-table td:nth-child(2) { width: 16%; }
+  table.chains-table th:nth-child(3), table.chains-table td:nth-child(3) { width: 12%; }
+  table.chains-table th:nth-child(4), table.chains-table td:nth-child(4) { width: 8%; }
+  table.chains-table th:nth-child(5), table.chains-table td:nth-child(5) { width: 50%; }
+  .chains-table td, .chains-table th { font-size: 13px; }
+  .bonus-item { margin-bottom: 8px; }
+  .bonus-item .title { font-weight: bold; }
+  .bonus-item .desc { font-size: 13px; color: #555; margin-top: 2px; }
+  .summary-box { background: #f0fdf4; border-right: 4px solid #276749; padding: 12px 16px; margin: 12px 0 20px 0; }
+  .summary-box ul { margin: 6px 0 0 0; }
+  .summary-box li { margin-bottom: 5px; }
+  .callout { background: #fef3c7; border-right: 4px solid #b45309; padding: 12px 14px; margin: 14px 0 18px 0; font-size: 14px; color: #78350f; }
+  .nav { margin: 18px 0; padding: 10px 14px; background: #f7fafc; border: 1px solid #e2e8f0; border-radius: 6px; font-size: 14px; }
+  .nav a { color: #2b6cb0; text-decoration: none; margin: 0 6px; }
+  .nav a:hover { text-decoration: underline; }
+  .toc { columns: 2; column-gap: 24px; }
+  .toc li { margin-bottom: 6px; }
+</style>
+</head>
+<body>
+
+<h1>יום העמק בג'יוג'איגואו <span class="en">(Jiuzhaigou Valley)</span> – תכנון מול מה שקרה בפועל</h1>
+<div class="nav">
+  <a href="00-overview.html">↩ סקירה כללית</a>
+  | <a href="00b-calendar.html">לוח שנה יומי</a>
+  | <a href="00d-transport.html">תחבורה בין הערים</a>
+  | <a href="04-jiuzhaigou.html">← ג'יוג'איגואו (Jiuzhaigou)</a>
+  | <a href="05-chongqing.html">צ'ונגצ'ינג (Chongqing) →</a>
+</div>
+<p class="intro">יום שלם אחד בעמק, על כרטיס עם תאריך נעול (4/9/2026). נכתב באותו ערב – עם ההיגיון מאחורי כל שינוי, והטעויות שהתגלו רק בשטח.</p>
+
+<span class="label">השורה התחתונה:</span>
+<div class="summary-box">
+<ul>
+  <li><strong>כל חמשת אתרי החובה נעשו, וגם כל חמשת המפלים המרכזיים של העמק.</strong></li>
+  <li>מה שנפל: היער הבתולי <span class="zh">(原始森林)</span>, אגם העשב <span class="zh">(芳草海)</span>, אגם הברבור <span class="zh">(天鹅海)</span>, אגם המראה <span class="zh">(镜海)</span>, ותצפית פי הנמר <span class="zh">(老虎嘴)</span>.</li>
+  <li>הכניסה בפועל הייתה ב-8:57 במקום 7:15 שתוכנן במקור – והתוכנית שרדה את זה כי סדר העמקים שונה מראש בהתאם.</li>
+</ul>
+</div>
+
+<h2>אילוצים קבועים – ידועים לפני הכניסה</h2>
+<table>
+<tr><th>כרטיס</th><td>¥190 כניסה + ¥90 אוטובוס פנימי. שמי, מקוון בלבד, אין קופה בשער. מכסה 41,000 ביום. התאריך נעול ל-4/9 – וזה מה שנעל את כל המסלול.</td></tr>
+<tr><th>חלון כניסה</th><td>8:00–14:00, הפארק נסגר ב-18:00. שונה ב-1/4/2026 מהמודל הישן של כניסה כל היום.</td></tr>
+<tr><th>אוטובוס ראשון</th><td>7:30</td></tr>
+<tr class="tr-chosen"><td colspan="2">האגם הארוך → נואוריאלנג, אוטובוס אחרון: <strong>16:30</strong> – הדדליין הקשיח היחיד בפארק</td></tr>
+<tr><th>ריזה → נואוריאלנג, אחרון</th><td>18:00</td></tr>
+<tr><th>נואוריאלנג → שער, אחרון</th><td>19:00</td></tr>
+<tr><th>מבנה העמק</th><td>צורת Y. שוג'נג <span class="zh">(树正沟)</span> הוא הגזע – 14 ק"מ; ריזה <span class="zh">(日则沟)</span> הזרוע הימנית – 17 ק"מ; זצ'אווה <span class="zh">(则查洼沟)</span> השמאלית – 18 ק"מ. נואוריאלנג יושב בצומת והוא גם נקודת ההחלפה היחידה וגם מקום האוכל היחיד.</td></tr>
+<tr><th>בסיס</th><td>מלון Yushe Yunshan, כפר לונגקאנג. הסעת מלון לשער – חובה להזמין בצ'ק-אין בערב שלפני.</td></tr>
+</table>
+
+<h2>איך התוכנית השתנתה עוד לפני שהגענו</h2>
+<p>חמש גרסאות, כל אחת נכפתה על ידי אילוץ אמיתי ולא על ידי העדפה.</p>
+
+<div class="rec-box opt-rejected">
+  <span class="title"><strong>גרסה 1 – ריזה קודם, 7:15 בשער</strong></span>
+  <div class="desc">המבנה הסטנדרטי: נוסעים לקצה הרחוק, יורדים ברגל, אחר כך זצ'אווה, ואז שוג'נג ברגל בדרך החוצה. היער הבתולי סומן כהחלטה פתוחה, בהמלצה לוותר.</div>
+</div>
+<div class="rec-box opt-rejected">
+  <span class="title"><strong>גרסה 2 – היער הבתולי הוחזר, זצ'אווה קודם</strong></span>
+  <div class="desc">כדי להכניס את היער היה צריך להעביר את זצ'אווה לבוקר, וזה דחף את אגם חמשת הפרחים ל-15:15. נדחתה.</div>
+</div>
+<div class="rec-box opt-rejected">
+  <span class="title"><strong>גרסה 3 – נעילת אתרי החובה, ריזה קודם</strong></span>
+  <div class="desc">חמישה אתרים הוגדרו כלא-ניתנים-לוויתור. היער הבתולי, אגם העשב ואגם הברבור נחתכו סופית: בלוק של כשעתיים בקצה העליון של העמק, שהמקור היחיד למימון שלו הוא ענף האגם הארוך – כלומר החלפה של שני אתרי חובה בשלושה אתרים מדרג שני. אגם חץ הבמבוק נחתך למרווח ביטחון.</div>
+</div>
+<div class="rec-box opt-rejected">
+  <span class="title"><strong>גרסה 4 – ההתחלה נדחתה ל-8:00, ואז ל-9:00</strong></span>
+  <div class="desc">זה מה שהפך את סדר העמקים. בהתחלה ב-9:00, ריזה-קודם מציב את קטע האגם הארוך בהתחלה של 14:20 וחזרה ב-16:20 – דקות בודדות של מרווח מול דדליין קשיח, בסוף יום שבו העיכובים מצטברים.</div>
+</div>
+<div class="rec-box opt-chosen">
+  <span class="title"><strong>גרסה 5 – זצ'אווה קודם, עם נקודות בקרה במקום לוח זמנים</strong></span>
+  <div class="desc">הדדליין הקשיח נסגר לפני 11:30, וכל שאר הדדליינים נשארו רכים. לכל אתר חובה הוגדר חיתוך מוכן מראש למקרה של איחור, והמרווח הוחנה <em>אחרי</em> אתר החובה האחרון במקום להתפזר לאורך היום.</div>
+</div>
+
+<div class="callout">
+<strong>העסקה שקיבלנו על עצמנו במודע:</strong> זצ'אווה-קודם מכניס אותך לשבילי ריזה בין 12:15 ל-14:30 – הקטע הכי עמוס בפארק, בשעה הכי גרועה שלו. ריזה-קודם הוא היום היפה יותר; זצ'אווה-קודם הוא היום האמין יותר. בחרנו באמינות.
+</div>
+
+<h2>מה קרה בפועל</h2>
+<table>
+<tr><th>שעה</th><th>מה</th></tr>
+<tr><td>8:57</td><td>מרכז המבקרים. <em>לא</em> רציפי האוטובוסים – אלה נמצאים אחרי הקרוסלות.</td></tr>
+<tr class="tr-slow"><td>9:15</td><td><strong>האוטובוס בכניסה שלח אותנו לקו האמצעי</strong> והוריד אותנו בשוג'נג ליד המפלים. לא בוחרים את האוטובוס הראשון – השילוט מנתב אותך לאחת משלוש נקודות הורדה.</td></tr>
+<tr><td>10:15</td><td>חזרנו במעלה לנואוריאלנג ועלינו על האוטובוס לאגם הארוך.</td></tr>
+<tr class="tr-chosen"><td>10:40</td><td>האגם הארוך <span class="zh">(长海)</span> – 3,101 מ', הגבוה והגדול בעמק.</td></tr>
+<tr class="tr-chosen"><td>11:25</td><td>בריכת חמשת הצבעים <span class="zh">(五彩池)</span>, אחרי ק"מ של שביל עץ במורד.</td></tr>
+<tr><td>12:10</td><td>חזרה לנואוריאלנג.</td></tr>
+<tr class="tr-chosen"><td>12:15</td><td>מפל נואוריאלנג <span class="zh">(诺日朗瀑布)</span> – נלקח כאן, בהחלפה של הצהריים, במקום להישאר לסוף היום. הסיר לגמרי את הסיכון עליו.</td></tr>
+<tr><td>13:00</td><td>אגם חץ הבמבוק הוחזר לתוכנית – נהיה אפשרי כי חלק משוג'נג כבר נלקח בטעות בבוקר.</td></tr>
+<tr><td>13:50</td><td>אגם חץ הבמבוק <span class="zh">(箭竹海)</span>, ואז 1.3 ק"מ במורד אל מפל חץ הבמבוק.</td></tr>
+<tr><td>14:50</td><td>אגם הפנדה <span class="zh">(熊猫海)</span> – הלכנו את 2 הק"מ במורד. את נקודות התצפית על מפל הפנדה לא מצאנו בבירור.</td></tr>
+<tr class="tr-slow"><td>15:10</td><td><strong>נטשנו את ההליכה לפי הנמר.</strong> השביל ממשיך בתוך מנהרת הגנה מאבנים – בלי שום נוף. חזרנו ועלינו לתחנה אחת באוטובוס.</td></tr>
+<tr class="tr-chosen"><td>15:25</td><td>אגם חמשת הפרחים <span class="zh">(五花海)</span>.</td></tr>
+<tr><td>16:05</td><td>פנינת השונית <span class="zh">(珍珠滩)</span> – ירדנו ברגל דרך תעלת הטווס.</td></tr>
+<tr class="tr-chosen"><td>16:20</td><td>מפל פנינת השונית <span class="zh">(珍珠滩瀑布)</span>.</td></tr>
+<tr><td>–</td><td>אגם המראה <span class="zh">(镜海)</span> – ויתרנו מבחירה. אין השתקפות בשעה הזו, ו-20 הדקות קנו עוד משרשרת שוג'נג.</td></tr>
+<tr><td>17:00</td><td>אגם הקרנף <span class="zh">(犀牛海)</span>, ואז שרשרת אגמי שוג'נג <span class="zh">(树正群海)</span> והכפר הטיבטי.</td></tr>
+<tr><td>18:10</td><td>יציאה באוטובוס – ליד אגם הניצוצות, אגם הקנים ומדף הבונסאי.</td></tr>
+</table>
+
+<div class="rec-box">
+<strong>הטעות של הבוקר שילמה על עצמה.</strong> ההורדה בשוג'נג עלתה כ-35 דקות, אבל היא סגרה בדיוק את העמק היחיד שתכננו להקריב – וזה מה שאיפשר להחזיר את אגם חץ הבמבוק אחר כך.
+</div>
+
+<h2>טעויות שהתגלו רק בשטח</h2>
+<ul class="note">
+<li><strong>אגם הפנדה ← פי הנמר ← אגם חמשת הפרחים היא לא הליכה נופית.</strong> קטע ארוך ממנה עובר בתוך מנהרת הגנה מאבנים, בלי נוף בכלל. התוכנית הציגה את זה כהליכה הכי חשובה של היום, כי פי הנמר היא התצפית היחידה מלמעלה על אגם חמשת הפרחים. הפתרון: לנסוע את הקטע ולוותר על התצפית, או לברר מראש אם אוטובוס עוצר ב-<span class="zh">老虎嘴</span>.</li>
+<li><strong>מפל חץ הבמבוק נמצא 1.3 ק"מ מתחנת חץ הבמבוק</strong>, לא לידה. זה הרג את התוכנית לראות את האגם והמפל ואז לנסוע את הקטע הבא – כי אחרי 1.3 ק"מ במורד, להמשיך ברגל זול יותר מלטפס בחזרה.</li>
+<li><strong>מבריכת חמשת הצבעים לנואוריאלנג זה כ-15 דקות, לא 22.</strong> ה-22 דקות הן מהאגם הארוך; הבריכה יושבת באמצע הענף. נקודת בקרה שלמה נקבעה 25 דקות פסימית מדי בגלל זה.</li>
+<li><strong>העצה על צד הישיבה באוטובוס לא שמישה.</strong> ה-FAQ הרשמי של הפארק אומר שמאל לשוג'נג ולזצ'אווה, ימין לריזה – בלי לציין כיוון נסיעה. בעמק שנוסעים בו פעמיים, התשובה מתהפכת. בודקים באיזה צד הנחל בזמן העלייה לאוטובוס; הוא לא חוצה.</li>
+<li><strong>בתחנות האמצע אוספים רק בכיוון ירידה.</strong> אוטובוסי העלייה מסיעים אנשים לקצה. ברגע שיורדים, הכיוון היחיד הוא למטה, ונואוריאלנג הוא המקום היחיד להחליף כיוון.</li>
+<li><strong>סגירה ב-18:00 לא אומרת להיתקע.</strong> אוטובוסים יוצאים מנואוריאלנג עד 19:00 בדיוק כדי לפנות את הפארק. מה שקורה ב-18:00 זה שהצוות מזיז אנשים מהשבילים לכיוון התחנות.</li>
+</ul>
+
+<h2>מה עבד</h2>
+<ul class="note">
+<li><strong>זצ'אווה קודם.</strong> הדדליין הקשיח נסגר עד 11:30 ולא היה רלוונטי יותר. בהתחלה ב-9:00, הסדר המקובל של ריזה-קודם היה ככל הנראה עולה בשני אתרי חובה.</li>
+<li><strong>לקחת את מפל נואוריאלנג בהחלפה של הצהריים</strong> במקום להשאיר אותו לדרך החוצה. הוא חמש דקות מהצומת, והוא היה אתר החובה הכי חשוף של היום.</li>
+<li><strong>ללכת את הקטעים במקום לעמוד בתור.</strong> תעלת הטווס והירידה מחץ הבמבוק היו שתיהן מהירות יותר ברגל מתורי האוטובוס של 11:00–14:00.</li>
+<li><strong>לאכול בעמידה בתור להחלפה.</strong> בנואוריאלנג נקודת ההחלפה ודוכן האוכל היחיד הם אותו מקום באותה שעה.</li>
+</ul>
+
+<h2>לקחים להמשך – ווּלונג ודזו</h2>
+<ol>
+<li>לאתר את השירות הפנימי שנסגר הכי מוקדם לפני שמסדרים כל דבר אחר, ולסגור אותו ראשון. שעת הסגירה של הפארק היא לא האילוץ המחייב – האוטובוס האחרון בענף הקצר הוא.</li>
+<li>לקחת מוקדם את אתר החובה הזול שיושב על צומת. זה לא עולה כלום ומוריד את הסיכון מהסוף.</li>
+<li>לא לסמוך על מרחקי קטעים או על הנחה ששני אתרים חולקים תחנה – לוודא בשילוט.</li>
+<li>לצפות לניתוב חצי-אקראי בכניסה, ולהחזיק את הסדר ההפוך מוכן מראש במקום להתווכח בשער.</li>
+</ol>
+
+<div class="nav">
+  <a href="00-overview.html">↩ סקירה כללית</a>
+  | <a href="00b-calendar.html">לוח שנה יומי</a>
+  | <a href="00d-transport.html">תחבורה בין הערים</a>
+  | <a href="04-jiuzhaigou.html">← ג'יוג'איגואו (Jiuzhaigou)</a>
+  | <a href="05-chongqing.html">צ'ונגצ'ינג (Chongqing) →</a>
+</div>
+
+</body>
+</html>
