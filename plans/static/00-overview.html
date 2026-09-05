@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>טיול לסין – סקירה כללית</title>
+<style>
+  body { font-family: 'Segoe UI', Arial, 'Noto Sans Hebrew', sans-serif; direction: rtl; text-align: right; max-width: 900px; margin: 40px auto; padding: 0 20px; color: #1a1a1a; line-height: 1.6; }
+  h1 { font-size: 26px; border-bottom: 3px solid #2b6cb0; padding-bottom: 10px; }
+  h2 { color: #2b6cb0; font-size: 19px; margin-top: 32px; border-bottom: 1px solid #cbd5e0; padding-bottom: 6px; }
+  h3 { font-size: 18px; color: #1a365d; margin-top: 28px; }
+  .intro { font-style: italic; color: #444; }
+  table { width: 100%; border-collapse: collapse; margin: 16px 0; direction: rtl; }
+  th, td { border: 1px solid #cbd5e0; padding: 8px 10px; text-align: right; font-size: 14px; vertical-align: top; }
+  th { background: #e2e8f0; font-weight: bold; }
+  ul { margin: 6px 0 18px 0; padding-right: 22px; }
+  li { margin-bottom: 4px; }
+  .label { font-weight: bold; margin-top: 14px; display: block; }
+  .note li { margin-bottom: 8px; }
+  .train-table tr.tr-chosen { background: #f0fff4; font-weight: bold; }
+  .train-table tr.tr-slow { color: #888; }
+  .train-table td, .train-table th { font-size: 13px; }
+  .rec-box { background: #ebf4ff; border: 1px solid #90b4e8; border-right: 4px solid #2b6cb0; border-radius: 4px; padding: 10px 12px; margin: 10px 0; font-size: 14px; }
+  .pack-box { background: #fffbea; border: 1px solid #e6c86e; border-right: 4px solid #b7791f; border-radius: 4px; padding: 10px 12px; margin: 10px 0; font-size: 14px; }
+  .opt-chosen { border-right: 4px solid #2f855a; background: #f0fff4; }
+  .opt-rejected { border-right: 4px solid #cbd5e0; background: #fafafa; opacity: 0.9; }
+  .toc-main { list-style: "– "; font-size: 13px; color: #555; margin: 2px 0 10px 0; padding-right: 26px; }
+  .toc-main li { margin-bottom: 2px; }
+  .food-note { font-size: 13px; color: #555; margin: 4px 0 12px 0; }
+  table.food-table th, table.food-table td { font-size: 13px; }
+  .badge { display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: 12px; font-weight: bold; margin-left: 4px; }
+  .badge-must { background: #fde2e2; color: #9b2c2c; }
+  .badge-nice { background: #e6f4ea; color: #276749; }
+  .badge-book { background: #ede9fe; color: #5b21b6; }
+  .badge-spa { background: #e0e7ff; color: #363594; }
+  .badge-tech { background: #fef3c7; color: #92400e; }
+  .badge-night { background: #1e293b; color: #e2e8f0; }
+  .badge-day { background: #fef9c3; color: #854d0e; }
+  .badge-daytag { background: #dbeafe; color: #1e40af; }
+  #route-map { height: 480px; border-radius: 8px; margin-bottom: 8px; }
+  .route-city-label { background: rgba(255,255,255,0.92) !important; border: none !important; box-shadow: 0 1px 3px rgba(0,0,0,0.25) !important; font-weight: bold; font-size: 12px; padding: 2px 6px; direction: rtl; }
+  .route-city-label::before { display: none !important; }
+  .badge-confirmed { background: #d1fae5; color: #065f46; }
+  .zh { font-family: 'Noto Sans CJK SC', 'PingFang SC', 'Heiti SC', sans-serif; direction: ltr; }
+  .en { direction: ltr; display: inline-block; }
+  .main-box { background: #ebf4ff; border-right: 4px solid #2b6cb0; padding: 10px 14px; margin: 10px 0 16px 0; }
+  .main-box .main-label { font-size: 12px; color: #2b6cb0; font-weight: bold; margin-bottom: 4px; }
+  .main-box div.item { font-weight: bold; margin-bottom: 2px; }
+  .after-item { margin-bottom: 10px; }
+  .after-item .title { font-weight: bold; }
+  .after-item .desc { font-size: 13px; color: #555; margin-top: 2px; }
+  .day-heading { font-weight: bold; color: #1a365d; font-size: 15px; margin: 16px 0 6px 0; border-bottom: 1px dashed #cbd5e0; padding-bottom: 3px; }
+  .extra-options-heading { color: #92400e; border-bottom: 2px solid #92400e; margin-top: 28px; font-size: 14px; }
+  table.food-table { table-layout: fixed; }
+  table.food-table th:nth-child(1), table.food-table td:nth-child(1) { width: 13%; }
+  table.food-table th:nth-child(2), table.food-table td:nth-child(2) { width: 15%; }
+  table.food-table th:nth-child(3), table.food-table td:nth-child(3) { width: 9%; }
+  table.food-table th:nth-child(4), table.food-table td:nth-child(4) { width: 7%; }
+  table.food-table th:nth-child(5), table.food-table td:nth-child(5) { width: 30%; }
+  table.food-table th:nth-child(6), table.food-table td:nth-child(6) { width: 26%; }
+  .venue { color: #1a5490; font-size: 12.5px; }
+  table.chains-table { table-layout: fixed; }
+  table.chains-table th:nth-child(1), table.chains-table td:nth-child(1) { width: 14%; }
+  table.chains-table th:nth-child(2), table.chains-table td:nth-child(2) { width: 16%; }
+  table.chains-table th:nth-child(3), table.chains-table td:nth-child(3) { width: 12%; }
+  table.chains-table th:nth-child(4), table.chains-table td:nth-child(4) { width: 8%; }
+  table.chains-table th:nth-child(5), table.chains-table td:nth-child(5) { width: 50%; }
+  .chains-table td, .chains-table th { font-size: 13px; }
+  .bonus-item { margin-bottom: 8px; }
+  .bonus-item .title { font-weight: bold; }
+  .bonus-item .desc { font-size: 13px; color: #555; margin-top: 2px; }
+  .summary-box { background: #f0fdf4; border-right: 4px solid #276749; padding: 12px 16px; margin: 12px 0 20px 0; }
+  .summary-box ul { margin: 6px 0 0 0; }
+  .summary-box li { margin-bottom: 5px; }
+  .callout { background: #fef3c7; border-right: 4px solid #b45309; padding: 12px 14px; margin: 14px 0 18px 0; font-size: 14px; color: #78350f; }
+  .nav { margin: 18px 0; padding: 10px 14px; background: #f7fafc; border: 1px solid #e2e8f0; border-radius: 6px; font-size: 14px; }
+  .nav a { color: #2b6cb0; text-decoration: none; margin: 0 6px; }
+  .nav a:hover { text-decoration: underline; }
+  .toc { columns: 2; column-gap: 24px; }
+  .toc li { margin-bottom: 6px; }
+</style>
+</head>
+<body>
+
+<h1>טיול לסין – סקירה כללית ולוגיסטיקה</h1>
+<p>מסמך זה מסכם את מסלול הטיול המתוכנן לסין: טבלת לוגיסטיקה ונתוני טיול כלליים. לתוכנית המפורטת (מה לעשות, מה לאכול, מה חובה להזמין מראש) של כל עיר – ראו את הקובץ הנפרד שלה בתפריט למטה.</p>
+
+<div class="summary-box">
+<span class="label">נתוני הטיול הכלליים:</span>
+<ul>
+<li>הגעה: 23/8/2026, 17:20 – בייג'ינג (PEK), טיסת אתיופיאן דרך אדיס אבבה</li>
+<li>עזיבה: 2/10/2026, 00:20 – משנגחאי פודונג (PVG), טיסת אתיופיאן דרך אדיס אבבה</li>
+<li>סה"כ 40 לילות בסין (מ-23/8 ועד 1/10 כלולים)</li>
+<li>12 תחנות במסלול</li>
+<li>לילות מוקצים: 40 מתוך 40</li>
+</ul>
+</div>
+
+<h2>מפת המסלול</h2>
+<div id="route-map"></div>
+<p class="food-note">הקואורדינטות הן ברמת דיוק של עיר/אזור (לתכנון, לא לניווט) – המספרים על המפה הם סדר הביקור במסלול.</p>
+
+<p><a href="00b-calendar.html"><b>← לוח שנה יומי מלא (יום-יום, כולל תאריכים)</b></a></p>
+
+<p><a href="00d-transport.html"><b>← אפשרויות התחבורה בין הערים: כל האופציות שנבדקו וההחלטה לכל מעבר</b></a></p>
+
+<p><a href="00c-booking-and-chains.html"><b>← מה להזמין מראש, רשתות שחובה לנסות, ומאכלים כלל-ארציים</b></a></p>
+
+<p><a href="pokemon-centers.html"><b>← פוקימון קלאבים בסין (Pokémon Official Card Gyms) – כולל מפה ואיפה הם במסלול שלנו</b></a></p>
+
+<h2>הכנות לפני הטיול</h2>
+<ul class="note">
+<li><a href="https://il.trip.com/things-to-do/detail/53873746?locale=en-IL&amp;curr=ILS">eSIM לסין (Trip.com, מוצר #53873746)</a> – 5G eSIM ליבשת סין, כולל תמיכה בגוגל מפות/ChatGPT (כנראה עם VPN מובנה, שנדרש בסין). תוכניות דאטה יומיות/כוללות, חיוב כל 24 שעות, בין 1-365 ימים, הפעלה בסקירת QR. מחיר החל מ-$0.20 (מבצע), כ-57,000 חוות דעת עם דירוג 4.6. עדיין לא הוזמן – רק אופציה שנראית טובה לבדוק/להשוות לפני הטיול.</li>
+<li><a href="https://www.astrill.com/">Astrill VPN</a> – VPN שכדאי לשקול להתקין ולהגדיר לפני הנסיעה – ידוע כאחד ה-VPN-ים שממשיכים לעבוד בסין (חסימת גוגל/וואטסאפ/אינסטגרם וכו' מחוץ ל-eSIM עם VPN מובנה). מומלץ לרכוש ולהתקין מראש, לפני הכניסה ליבשת, כי אתרי VPN עצמם חסומים בתוך סין.</li>
+<li><a href="https://apps.apple.com/app/shadowrocket/id932747118">Shadowrocket</a> – לא VPN בעצמו אלא אפליקציית קליינט (iOS בלבד) שמתחברת לשרתי פרוקסי בפרוטוקולים שנועדו לעקוף את החומה הסינית (Shadowsocks/VMess/Trojan/VLESS) – הקליינט הפופולרי ביותר בקרב משתמשי iOS בסין עצמה. דורש שרת/מנוי פרוקסי בנפרד (לא מגיע 'מוכן'); כמו כל פתרון VPN, צריך להתקין ולהגדיר לפני הנסיעה כי חנות האפליקציות/אתרי ההורדה חסומים בתוך סין.</li>
+<li><a href="https://webinv02.sc-aff.cc/">SpeedCat VPN</a> – VPN נוסף שממוקד בסין – זמין ל-Windows/Android/iOS/macOS/Linux ונתבים, עם שרתים בהונג קונג/יפן/סינגפור/ארה"ב וכו'. שכבת גיבוי נוספת ל-Astrill/Shadowrocket – מומלץ להתקין יותר מפתרון VPN אחד, כי חלקם נחסמים בפתאומיות באמצע נסיעה. קוד קופון בהרשמה: AttiqueStic (מהערוץ ביוטיוב https://www.youtube.com/@AttiqueStic). הקישור למעלה הוא לינק ההרשמה/שותפים הרשמי (sc-aff.cc) – לא אומת באופן עצמאי מול מקור רשמי אחר, אז לבדוק בזמן ההרשמה שהקוד עדיין בתוקף.</li>
+</ul>
+
+<h2>תוכנית מפורטת לפי עיר ומסלול</h2>
+<p>לתוכנית המלאה של כל עיר (מה לעשות, מה לאכול, אופציות מלון, מה חובה להזמין) – ללחוץ על שם העיר.</p>
+<table>
+<tr><th>יעד</th><th>לילות</th><th>הגעה מ-</th><th>אמצעי תחבורה מומלץ</th><th>משך נסיעה</th><th>עיקרי האתרים</th></tr>
+<tr>
+  <td><a href="01-beijing.html">בייג'ינג (Beijing)</a></td>
+  <td>6</td>
+  <td>טיסה מהארץ</td>
+  <td>-</td>
+  <td>-</td>
+  <td><ul class="toc-main"><li>החומה הסינית</li><li>העיר האסורה</li><li>יום שלם בפארק יוניברסל סטודיוס</li></ul></td>
+</tr>
+<tr>
+  <td><a href="02-xian.html">שיאן (Xi'an)</a></td>
+  <td>2</td>
+  <td>בייג'ינג (Beijing)</td>
+  <td>רכבת מהירה ישירה</td>
+  <td>כ-4 שעות</td>
+  <td><ul class="toc-main"><li>צבא הטרה-קוטה (יציאה מחוץ לעיר, כ-חצי יום)</li></ul></td>
+</tr>
+<tr>
+  <td><a href="03-chengdu.html">צ'נגדו (Chengdu)</a></td>
+  <td>3</td>
+  <td>שיאן (Xi'an)</td>
+  <td>רכבת מהירה ישירה</td>
+  <td>כ-3-4.5 שעות</td>
+  <td><ul class="toc-main"><li>בסיס המחקר לרביית פנדות ג'איינט – יש גם פנדות אדומות שאפשר להאכיל</li></ul></td>
+</tr>
+<tr>
+  <td><a href="04-jiuzhaigou.html">ג'יוג'איגואו (Jiuzhaigou)</a></td>
+  <td>2</td>
+  <td>צ'נגדו (Chengdu)</td>
+  <td>רכבת מהירה צ'נגדו מזרח ← חואנגלונג-ג'יוג'איג'אי (1:37-2:47, 12 זוגות ביום) + הסעה פרטית לעמק (1.5-2 שעות, 85-130 ק״מ)</td>
+  <td>כ-4-5 שעות דלת-לדלת</td>
+  <td><ul class="toc-main"><li>עמק ג'יוג'איגואו – יום שלם, כרטיס כניסה + אוטובוס פנימי</li><li><a href="04b-jiuzhaigou-valley-day.html">יום העמק: תכנון מול בפועל (סיכום 4/9)</a></li></ul></td>
+</tr>
+<tr>
+  <td><a href="05-chongqing.html">צ'ונגצ'ינג (Chongqing)</a></td>
+  <td>4</td>
+  <td>ג'יוג'איגואו (Jiuzhaigou)</td>
+  <td>הסעה לתחנת חואנגלונג-ג'יוג'איג'אי (1.5-2 ש') + רכבת לצ'נגדו מזרח (1:37-2:47) + החלפה + רכבת לצ'ונגצ'ינג צפון (1:02-1:30). הטיסה JZH←CKG נבדקה ונדחתה – ראו טבלת אפשרויות התחבורה</td>
+  <td>כ-6-7 שעות (יציאה 07:05 → הגעה 13:00-14:00). <b>עודכן ל-5/9</b>, לא 6/9</td>
+  <td><ul class="toc-main"><li>הונגיאדונג בלילה – מתחם הבניינים על כלונסאות, התצפית האיקונית של העיר</li></ul></td>
+</tr>
+<tr>
+  <td><a href="06-zhangjiajie.html">ג'אנגג'יאג'יה (Zhangjiajie)</a></td>
+  <td>5</td>
+  <td>צ'ונגצ'ינג (Chongqing)</td>
+  <td>רכבת מהירה ישירה</td>
+  <td>כ-2.5 שעות</td>
+  <td><ul class="toc-main"><li>הר אווטאר וגשר האבן הטבעי</li><li>הסולם הגבוה בעולם – בוקר יום 2</li><li>הר טיאנמן – ממש בתוך העיר, סמוך לתחנת הרכבת</li></ul></td>
+</tr>
+<tr>
+  <td><a href="07-yangshuo.html">יאנגשואו / גוילין (Yangshuo / Guilin)</a></td>
+  <td>4</td>
+  <td>ג'אנגג'יאג'יה (Zhangjiajie)</td>
+  <td>רכבת ישירה D3967, ג'אנגג'יאג'יה West 07:20 ← גוילין 14:27 (אחת ביום) + הסעה ליאנגשואו (1-1.5 ש'). אין טיסה ישירה ג'אנגג'יאג'יה←גוילין</td>
+  <td>יום נסיעה שלם (כ-8-8.5 שעות)</td>
+  <td><ul class="toc-main"><li>שיט רומנטי על נהר לי</li><li>רכיבת קטנועים בין שדות אורז</li></ul></td>
+</tr>
+<tr>
+  <td><a href="08-shenzhen.html">שנזן (Shenzhen)</a></td>
+  <td>1</td>
+  <td>יאנגשואו (Yangshuo)</td>
+  <td>רכבת מהירה ישירה G2907, יאנגשואו 09:49 ← שנזן צפון 12:30 (אחת ביום, נמכרת מהר). גיבוי: יאנגשואו ← גוילין צפון + גוילין ← שנזן (6 ביום, ראשונה 09:07)</td>
+  <td>כ-2:41 (הישירה) / כ-5 שעות (בגיבוי)</td>
+  <td><ul class="toc-main"><li>הוואצ'יאנגביי – שוק האלקטרוניקה/גאדג'טים הכי מפורסם בעולם, אחר הצהריים</li><li>Window of the World בערב</li></ul></td>
+</tr>
+<tr>
+  <td><a href="09-hongkong.html">הונג קונג (Hong Kong)</a></td>
+  <td>5</td>
+  <td>שנזן (Shenzhen)</td>
+  <td>רכבת מהירה ישירה שנזן פוטיאן ← הונג קונג מערב קאולון (מעבר גבול בתחנה)</td>
+  <td>כ-14-33 דקות</td>
+  <td><ul class="toc-main"><li>ויקטוריה פיק ברכבל הישן + שקיעה/נוף לילה על קו הרקיע</li><li>מעבורת הכוכב בין האי לקאולון</li><li>יום שלם בדיזנילנד הונג קונג</li></ul></td>
+</tr>
+<tr>
+  <td><a href="10-hangzhou.html">האנגג'ואו (Hangzhou)</a></td>
+  <td>2</td>
+  <td>הונג קונג (Hong Kong)</td>
+  <td>רכבת מהירה ישירה G100, הונג קונג מערב קאולון ← האנגג'ואו西 (יוצאת 11:37, מגיעה 18:27)</td>
+  <td>כ-6:50 שעות</td>
+  <td><ul class="toc-main"><li>טיולים סביב האגם המערבי ושקיעות</li></ul></td>
+</tr>
+<tr>
+  <td><a href="10b-wangxian.html">וואנגשיאן ואלי (Wangxian Valley)</a></td>
+  <td>1</td>
+  <td>האנגג'ואו (Hangzhou)</td>
+  <td>רכבת מהירה האנגג'ואו מזרח ← שאנגראו (כ-1:22 שעות) + הסעה/שאטל לעמק (כ-1 שעה)</td>
+  <td>כ-2:20 שעות</td>
+  <td><ul class="toc-main"><li>לינה בבקתת צוק מעל קניון המכרה הנטוש</li><li>'ים עננים' ותצפית לילה מוארת על העמק</li></ul></td>
+</tr>
+<tr>
+  <td><a href="11-shanghai.html">שנגחאי (Shanghai)</a></td>
+  <td>5</td>
+  <td>וואנגשיאן ואלי (Wangxian Valley)</td>
+  <td>רכבת מהירה ישירה שאנגראו ← שנגחאי (אין צורך לחזור להאנגג'ואו)</td>
+  <td>כ-2:14 שעות</td>
+  <td><ul class="toc-main"><li>טיילת הבאנד ונוף רקיע העיר בלילה</li></ul></td>
+</tr>
+</table>
+
+<span class="label">הערת לוגיסטיקה כללית:</span>
+<ul class="note">
+<li>שינוי מהותי מהגרסה הקודמת: חואנגשאן וסוג'ואו (כלינה) הוחלפו – חואנגשאן יצא מהמסלול, וג'יוג'איגואו (ג'יוג'איגואו, Jiuzhaigou) נכנס במקומו אחרי צ'נגדו. סוג'ואו נשארת, אבל כגיחת יום משנגחאי/האנגג'ואו, לא כלינה נפרדת.</li>
+<li>צ'נגדו ← ג'יוג'איגואו (תוקן): הרכבת עצמה אכן קצרה – צ'נגדו מזרח ← תחנת חואנגלונג-ג'יוג'איג'אי, 1:37-2:47 (12 זוגות רכבות ביום, הראשונה סביב 06:00). אבל ההסעה מהתחנה לכניסת העמק היא 1.5-2 שעות (85-130 ק״מ), לא 40 דקות – הנתון של 40 דקות שהיה כאן קודם שייך לחואנגלונג, שנמצא 25 ק״מ מהתחנה, ולא לג'יוג'איגואו. סה״כ דלת-לדלת: כ-4-5 שעות. עדיין הרבה יותר טוב מהאוטובוס הישן (7-10 שעות), ולכן יום 1 בג'יוג'איגואו נשאר יום הגעה/התארגנות בלבד – שזו גם ההחלטה הנכונה בגלל הגובה (העמק 2,000-3,300 מ׳). <b>עדכון 5/9: ג'יוג'איגואו קוצרה מ-3 לילות ל-2 (יציאה 5/9 במקום 6/9), והלילה שהתפנה עבר לצ'ונגצ'ינג (4 לילות). בלי חואנגלונג כיום נפרד אין תוכן ליום שלישי באזור, והעמק עצמו הוא יום אחד. שני הלילות הם לילה של הגעה ולילה של יציאה – אי אפשר לקצר ל-1: הרכבת האחרונה מהתחנה לצ'נגדו יוצאת 21:19 ומגיעה 23:00, כלומר אחרי יום מלא בעמק אין חיבור המשך לצ'ונגצ'ינג ורק מחליפים לילה בג'יוג'איגואו בלילה בצ'נגדו. שימו לב גם: מ-1/4/2026 הכניסה לעמק היא 08:00-14:00 בלבד (סגירה 18:00).</b></li>
+<li>ג'יוג'איגואו ← צ'ונגצ'ינג (שונתה ההחלטה – רכבת במקום טיסה): נכון שאין רכבת ישירה, אבל החיבור דרך צ'נגדו מזרח לא נבדק קודם והוא מנצח את הטיסה. רכבת: הסעה לתחנה (1.5-2 ש') + חואנגלונג-ג'יוג'איג'אי ← צ'נגדו מזרח (1:37-2:47) + החלפה (45-60 דק') + צ'נגדו מזרח ← צ'ונגצ'ינג צפון (1:02-1:30, מעל 150 רכבות ביום) = כ-6-7 שעות; יציאה מהמלון ב-07:05 מביאה לצ'ונגצ'ינג ב-13:00-14:00 (המעבר עבר ל-5/9). טיסה: הסעה לשדה התעופה (1.5 ש') + כ-2 שעות בשדה + 1:20 + כ-שעה למרכז = כ-5.5-6 שעות – חצי שעה עד שעה פחות, אבל שדה התעופה JZH נמצא בגובה 3,448 מ׳, מפעיל שני קווים בלבד בסך הכל (צ'נגדו וצ'ונגצ'ינג) עם שיעור ביטולים גבוה מהממוצע, וביטול שם עולה יום שלם בלי תוכנית ב׳. בנוסף הרכבת חוסכת צניחת גובה של 3,448→250 מ׳ בשעה, זולה יותר, ומורידה בתחנה במרכז העיר ולא בשדה תעופה. ההסעה של 1.5-2 שעות קיימת בשתי האפשרויות בכל מקרה. שימו לב: המיניבוס משדה התעופה לעמק ג'יוג'איגואו לא פועל יותר (נזקי רעידת האדמה) – צריך הסעה פרטית/מונית בכל תרחיש.</li>
+<li>ג'אנגג'יאג'יה ← יאנגשואו/גוילין (תוקן – אין טיסה ישירה בכלל): מה שהיה כתוב כאן קודם ('מומלץ טיסה') לא נכון – אין טיסות ישירות ג'אנגג'יאג'יה ← גוילין. שתי האפשרויות האמיתיות: (א) רכבת ישירה D3967, יוצאת מג'אנגג'יאג'יה West ב-07:20 ומגיעה לגוילין ב-14:27 (כ-7 שעות, אחת ביום בלבד) ואז 1-1.5 שעות ליאנגשואו; (ב) טיסה דרך צ'אנגשה – כ-5 שעות עד צ'אנגשה + 3.5 שעות רכבת. בשתיהן זה יום מעבר שלם. נבחרה הרכבת הישירה: מושב אחד במקום שתי טיסות והחלפה. משמעות: יציאה מהמלון ב-06:00-06:30 ולכן הלילה האחרון בג'אנגג'יאג'יה חייב להיות במרכז העיר, לא בוולינגיואן. הגעה ליאנגשואו סביב 16:30 – מספיק למופע ערב, אבל רק ל-Impression Sanjie Liu שנמצא ביאנגשואו עצמה; Guilin Romance Park נמצא בגוילין ולא מתאים ליום הזה (ירד ל'אפשרויות נוספות' בעמוד יאנגשואו).</li>
+<li>יאנגשואו ← שנזן (מצאנו רכבת ישירה): יש רכבת מהירה ישירה אחת ביום, G2907, שיוצאת מתחנת יאנגשואו ב-09:49 ומגיעה לשנזן צפון ב-12:30 – 2 שעות ו-41 דקות, בלי לעבור דרך גוילין בכלל. זה חוסך כשעתיים מול המסלול הקודם (יאנגשואו ← גוילין ← שנזן), ומשנה את היום לגמרי: יוצאים מהמלון ב-08:45 (תחנת יאנגשואו היא 45 דקות מרחוב ווסט), ובהוואצ'יאנגביי כבר סביב 13:30 – כלומר כ-4 שעות ו-45 דקות שם (רוב החנויות 10:00-20:00), ואחר כך אפשר גם Window of the World בכניסת לילה (מ-18:00, הפארק עד 21:30, מופע אור במגדל אייפל ב-19:00 וזיקוקים ב-21:00). כלומר שני הדברים נכנסים, לא רק אחד. אזהרה: רכבת אחת ביום שנמכרת מהר – להזמין ברגע שנפתח החלון. גיבוי: יאנגשואו ← גוילין צפון + גוילין ← שנזן (6 רכבות ביום, הראשונה 09:07, 2:56-3.5 שעות) – הגעה דומה אבל יציאה ב-07:00.</li>
+<li>שנזן והונג קונג: רכבת מהירה ישירה שנזן פוטיאן ← הונג קונג מערב קאולון, כ-14-33 דקות בלבד. הונג קונג פטורה מאשרת כניסה לאזרחי ישראל (עד 90 יום). חשוב: יציאה מסין היבשתית להונג קונג נחשבת יציאה מהמדינה, והכניסה בחזרה דורשת אשרת סין multiple/double-entry (לא single-entry).</li>
+<li>הונג קונג ← האנגג'ואו: תגלית חשובה – יש רכבת מהירה ישירה אחת ביום (G100) שיוצאת ממערב קאולון ב-11:37 ומגיעה ישירות לתחנת האנגג'ואו西 ב-18:27 (כ-6:50 שעות), בלי לעבור דרך שנזן או לטוס. זו אותה רכבת שהמשכה מגיע לשנגחאי הונגצ'יאו – כך שאם משנים תוכניות אפשר גם לרדת ישר בשנגחאי. יש רק רכבת אחת ביום בכיוון הזה, אז הבוקר האחרון בהונג קונג צריך להיבנות סביב יציאה ב-11:37.</li>
+<li>מקאו כגיחת יום מהונג קונג: מעבורת מהירה (~55-70 דקות) בתדירות גבוהה לאורך היום. מקאו הוא SAR נפרד בדיוק כמו הונג קונג ופטור מאשרה לישראלים (עד 90 יום) – כלומר המעבר הונג קונג↔מקאו↔הונג קונג לא נוגע ביבשת סין בכלל ולא צורך כניסה/יציאה נוספת על אשרת הסין (בניגוד למעבר שנזן↔הונג קונג). חשוב לחזור להונג קונג באותו יום/לפני הבוקר של ה-11:37 כדי לא לפספס את רכבת ה-G100.</li>
+<li>סוג'ואו כגיחת יום: קרובה מאוד גם להאנגג'ואו וגם לשנגחאי (כ-40-60 דקות רכבת מהירה מכל אחת מהן) – אפשר לשלב אותה כיום שלם באמצע השהות בהאנגג'ואו או בשנגחאי, בלי לעבור מלון.</li>
+<li>האנגג'ואו ← וואנגשיאן ואלי ← שנגחאי: במקום לחזור להאנגג'ואו אחרי גיחת יום לוואנגשיאן ואלי, יוצאים מהאנגג'ואו מזרח לתחנת שאנגראו (כ-1:22 שעות), הסעה/שאטל לעמק עצמו (כ-1 שעה) ולינה שם בבקתת צוק אמיתית – ולמחרת רכבת מהירה ישירה משאנגראו לשנגחאי (כ-2:14 שעות, כ-76 רכבות ביום, משעה 00:07 עד 23:49), בלי לחזור על העקבות. כך רואים את העמק גם מואר בלילה וגם בבוקר, ולא רק גיחת יום דחוסה.</li>
+<li>חג האמצע-הסתיו (Mid-Autumn Festival) חל ב-25/9/2026 – יום 2 המלא בהאנגג'ואו (מגיעים ב-24/9 בערב, יום לפני, בכוונה, כדי שלא צריך לרדת מרכבת של 6:50 שעות ולרוץ ישר לשיט הירח). זו ההזדמנות לצפיית הירח הכי מפורסמת בסין (שלוש הבריכות המשתקפות בירח, על האגם המערבי) – ראו פירוט בעמוד האנגג'ואו.</li>
+<li>שבוע הזהב הסיני (National Day Golden Week, חג המדינה) חל 1-7/10/2026 – והיום האחרון בשנגחאי (1/10, לפני הטיסה ב-00:20) נופל ממש ביום הראשון והעמוס ביותר של השבוע הזה. תקופת הנסיעות הפנים-סינית העמוסה בשנה: תורים של 3-4 שעות בפארקי שעשועים, מוזיאונים מלאים, ומחירי מלונות/כרטיסים שמזנקים. כל מה שלא הוזמן מראש ליום הזה כדאי לתכנן בזהירות כפולה, ולהעדיף אתרים פחות פופולריים/פתוחים יותר על פני האטרקציות הכי מבוקשות.</li>
+<li>עיסוי כפות רגליים (足疗, foot massage) – שונה מחוויות הספא/מעיינות החמים שכבר מפוזרות בכל עיר בטיול: זה מקומון קטן על כל פינה, זול (כ-¥60-120 לשעה), פתוח עד מאוחר, ומצוין אחרי יום הליכה ארוך. לא צריך לתכנן מראש – פשוט נכנסים לאחד כשנתקלים בו בערב.</li>
+</ul>
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+  const routePoints = [{"name":"בייג'ינג (Beijing)","lat":39.9042,"lng":116.4074,"nights":"6","order":1,"color":"#dc2626"},{"name":"שיאן (Xi'an)","lat":34.3416,"lng":108.9398,"nights":"2","order":2,"color":"#ea580c"},{"name":"צ'נגדו (Chengdu)","lat":30.5728,"lng":104.0668,"nights":"3","order":3,"color":"#d97706"},{"name":"ג'יוג'איגואו (Jiuzhaigou)","lat":33.2452,"lng":103.9183,"nights":"2","order":4,"color":"#65a30d"},{"name":"צ'ונגצ'ינג (Chongqing)","lat":29.563,"lng":106.5516,"nights":"4","order":5,"color":"#059669"},{"name":"ג'אנגג'יאג'יה (Zhangjiajie)","lat":29.1173,"lng":110.4794,"nights":"5","order":6,"color":"#0891b2"},{"name":"יאנגשואו (Yangshuo)","lat":24.777,"lng":110.49,"nights":"4","order":7,"color":"#2563eb"},{"name":"שנזן (Shenzhen)","lat":22.5431,"lng":114.0579,"nights":"1","order":8,"color":"#4f46e5"},{"name":"הונג קונג (Hong Kong)","lat":22.3193,"lng":114.1694,"nights":"5","order":9,"color":"#7c3aed"},{"name":"האנגג'ואו (Hangzhou)","lat":30.2741,"lng":120.1551,"nights":"2","order":10,"color":"#c026d3"},{"name":"וואנגשיאן ואלי (Wangxian Valley)","lat":28.35,"lng":118.05,"nights":"1","order":11,"color":"#db2777"},{"name":"שנגחאי (Shanghai)","lat":31.2304,"lng":121.4737,"nights":"5","order":12,"color":"#78716c"}];
+  const routeMap = L.map('route-map').setView([30.5, 112], 4.4);
+  // Same OSM-based tiles as the Pokémon page, but CARTO's Voyager style renders place labels
+  // in Latin/English script instead of Chinese (unlike the plain OSM Mapnik tiles).
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+    attribution: '&copy; OpenStreetMap contributors &copy; CARTO',
+    maxZoom: 18,
+    subdomains: 'abcd',
+  }).addTo(routeMap);
+  L.polyline(routePoints.map((p) => [p.lat, p.lng]), { color: '#64748b', weight: 2, dashArray: '6,6' }).addTo(routeMap);
+  routePoints.forEach((p) => {
+    const marker = L.circleMarker([p.lat, p.lng], {
+      radius: 9,
+      color: p.color,
+      fillColor: p.color,
+      fillOpacity: 0.9,
+      weight: 2,
+    }).addTo(routeMap);
+    marker.bindTooltip(p.order + '. ' + p.name, { permanent: true, direction: 'right', offset: [10, 0], className: 'route-city-label' });
+    marker.bindPopup('<b>' + p.order + '. ' + p.name + '</b><br>' + p.nights + ' לילות');
+  });
+</script>
+
+</body>
+</html>
